@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>在线销售</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style type="text/css">
+        .aui-bar-nav {
+            background-color: #3aab40;
+        }
+        .text-white {
+            color: #ffffff !important;
+        }
+        .aui-list-item-label {
+            width: 4rem !important;
+        }
+        .title {
+            color: #5eae62;
+        }
+        .title:after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 18px;
+            background: #5eae62;
+            top: 13px;
+        }
+        .label {
+            display: inline-block;
+            padding: 0.55em 0.75em;
+            font-size: 0.7rem;
+            line-height: 1;
+            color: #616161;
+            border: 1px solid #ddd;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border-radius: 0.15em;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .label.active {
+            border: 1px solid #5eae62;
+            color: #5eae62;
+        }
+        .aui-btn-success {
+            background-color: #5eae62;
+        }
+    </style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">在线销售</div>
+    </header>
+    <section class="aui-content">
+        <ul class="aui-list aui-form-list aui-margin-b-15">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        房源
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请选择房源">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-down"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        姓名
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" value="张三">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-info aui-text-success"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        电话
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入电话">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-info aui-text-success"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        身份证
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入身份证号码">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-info aui-text-success"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        金额
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入金额">
+                    </div>
+                    <div class="aui-list-item-label-icon">元</div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        类型
+                    </div>
+                    <div class="aui-list-item-input">
+                        <label><input type="radio" class="aui-radio" checked=""> 认筹</label>
+                        <label><input type="radio" class="aui-radio"> 认购</label>
+                        <label><input type="radio" class="aui-radio"> 小定</label>
+                    </div>
+                    <div class="aui-list-item-label-icon"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="aui-card-list">
+            <div class="aui-card-list-header title">
+                <div class="aui-margin-l-10">付款方式</div>
+            </div>
+            <div class="aui-card-list-content-padded aui-border-t">
+                <div class="label active">商业贷款</div>
+                <div class="label">组合贷款</div>
+                <div class="label">公积金贷款</div>
+                <div class="label">全款分期</div>
+                <div class="label">全款</div>
+            </div>
+        </div>
+        <div class="aui-card-list">
+            <div class="aui-card-list-header title">
+                <div class="aui-margin-l-10">付款银行</div>
+            </div>
+            <div class="aui-card-list-content-padded aui-border-t">
+                <div class="label active">中国银行</div>
+                <div class="label">工商银行</div>
+                <div class="label">农业银行</div>
+                <div class="label">建设银行</div>
+                <div class="label">招商银行</div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content-padded">
+        <div class="aui-btn aui-btn-block aui-btn-success aui-btn-sm">购买</div>
+    </section>
+</body>
+</html>

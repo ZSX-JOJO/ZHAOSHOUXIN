@@ -1,0 +1,375 @@
+<!DOCTYPE doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" name="viewport"/>
+            <meta content="telephone=no,email=no,date=no,address=no" name="format-detection">
+                <link href="../../css/aui.css" rel="stylesheet" type="text/css"/>
+                <link href="../../css/aui-slide.css" rel="stylesheet" type="text/css"/>
+                <style type="text/css">
+        #tabCon_1{
+            display: none;
+        }
+        #tabCon_2{
+            display: none;
+        }
+        .aui-tab-item.aui-active {
+            color: #5eae62;
+            border-bottom: 2px solid #5eae62;
+        }
+        .silder img {
+            width: 100%;
+        }
+        .text-light {
+            color: #999 !important;
+        }
+        .title {
+            color: #5eae62;
+        }
+        .title:after {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 18px;
+            background: #5eae62;
+            top: 13px;
+        }
+        .room-item img {
+            width: 100%;
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+                </style>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- 轮播图 -->
+        <div class="aui-content aui-font-size-12 " id="aui-slide">
+            <div class="aui-slide-wrap">
+                <div class="aui-slide-node">
+                    <img src="../../image/news/banner_1.png">
+                    </img>
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../../image/news/banner_2.png">
+                    </img>
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../../image/news/banner_3.png">
+                    </img>
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../../image/news/banner_4.png">
+                    </img>
+                </div>
+            </div>
+            <div class="aui-slide-page-wrap">
+            </div>
+        </div>
+        <div class="aui-tab">
+            <div class="aui-tab-item aui-active" onclick="changeTab(0)">
+                楼盘优惠
+            </div>
+            <div class="aui-tab-item" onclick="changeTab(1)">
+                近期活动
+            </div>
+            <div class="aui-tab-item" onclick="changeTab(2)">
+                楼盘进展
+            </div>
+        </div>
+        <!-- 左边 -->
+        <div id="tabCon">
+        <div id="tabCon_0">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                【左边内容】三期开盘盛大聚会 成交既有好礼相送
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n2.jpg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                交5万优惠10万，全款98折，按揭99折
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                8号楼开盘期缴35000元/平
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+        </div>
+        <!-- 中间 -->
+        <div id="tabCon_1">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                【中间内容】三期开盘盛大聚会 成交既有好礼相送
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n2.jpg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                交5万优惠10万，全款98折，按揭99折
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                8号楼开盘期缴35000元/平
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <!-- 右边 -->
+        <div id="tabCon_2">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                【右边内容】三期开盘盛大聚会 成交既有好礼相送
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n2.jpg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                交5万优惠10万，全款98折，按揭99折
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 6rem">
+                        <img src="../../image/n1.jpeg">
+                        </img>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                8号楼开盘期缴35000元/平
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15 aui-font-size-14 text-light">
+                            <div>
+                                <i class="aui-iconfont aui-icon-comment aui-font-size-14">
+                                </i>
+                                88
+                            </div>
+                            <div>
+                                <i class="aui-iconfont aui-icon-date aui-font-size-14">
+                                </i>
+                                2016-11-17
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </body>
+    <script src="../../script/api.js" type="text/javascript">
+    </script>
+    <script src="../../script/api-tab.js" type="text/javascript">
+    </script>
+    <script src="../../script/aui-slide.js" type="text/javascript">
+    </script>
+    <script src="../../script/jquery.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        // 默认tab全部隐藏，只显示点击的。
+        function changeTab(tabCon_number){
+        for(i=0;i<=2;i++) { 
+          document.getElementById("tabCon_"+i).style.display="none"; //将所有的层都隐藏 
+          } 
+          document.getElementById("tabCon_"+tabCon_number).style.display="block";//显示点击层 
+         }
+
+
+        var slide = new auiSlide({
+        container:document.getElementById("aui-slide"), //容器
+        // "width":300, //宽度
+        "height":200, //高度
+        "speed":500, //速度
+        "autoPlay": 3000, //自动播放
+        "loop":true,//是否循环
+        "pageShow":true,//是否显示分页器
+        "pageStyle":'dot', //分页器样式，分dot,line
+        'dotPosition':'center' //当分页器样式为dot时控制分页器位置，left,center,right
+    })
+    </script>
+</html>

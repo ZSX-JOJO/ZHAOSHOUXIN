@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style type="text/css">
+        body {
+            background: #f4f5f6;
+        }
+        .aui-content-padded {
+            margin: 0 0.75rem 0.75rem;
+        }
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        img.img-w80 {
+            width: 4rem;
+        }
+        img.img-w170 {
+            width: 8.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="aui-content aui-margin-b-15">
+        <div id="aui-slide">
+            <div class="aui-slide-wrap" >
+                <div class="aui-slide-node aui-slide-node-middle aui-slide-node-center">
+                    <img src="../image/1/banner.png">
+                </div>
+            </div>
+            <div class="aui-slide-page-wrap"><!--分页容器--></div>
+        </div>
+    </section>
+    <section class="aui-content-padded">
+        <div class="aui-row">
+            <div class="aui-col-xs-3">
+                <img src="../image/1/1.png" class="img-w80">
+            </div>
+            <div class="aui-col-xs-9">
+                <div class="aui-col-xs-4">
+                    <img src="../image/1/1@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-4">
+                    <img src="../image/1/2@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-4">
+                    <img src="../image/1/3@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-4 aui-margin-t-10">
+                    <img src="../image/1/4@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-4 aui-margin-t-10">
+                    <img src="../image/1/5@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-4 aui-margin-t-10">
+                    <img src="../image/1/6@2x.png" class="img-w80">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content-padded">
+        <div class="aui-row">
+            <div class="aui-col-xs-6">
+                <img src="../image/1/7@2x.png" class="img-w170">
+            </div>
+            <div class="aui-col-xs-6">
+                <div class="aui-col-xs-12">
+                    <img src="../image/1/8@2x.png" class="img-w170">
+                </div>
+                <div class="aui-col-xs-6 aui-margin-t-10">
+                    <img src="../image/1/9@2x.png" class="img-w80">
+                </div>
+                <div class="aui-col-xs-6 aui-margin-t-10">
+                    <img src="../image/1/10@2x.png" class="img-w80">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content-padded">
+        <div class="aui-row">
+            <div class="aui-col-xs-6">
+                <div class="aui-col-xs-12">
+                    <img src="../image/1/11@2x.png" class="img-w170">
+                </div>
+                <div class="aui-col-xs-12 aui-margin-t-15">
+                    <img src="../image/1/12@2x.png" class="img-w170">
+                </div>
+            </div>
+            <div class="aui-col-xs-6">
+                <img src="../image/1/13@2x.png" class="img-w170">
+            </div>
+        </div>
+    </section>
+    <section class="aui-content-padded">
+        <div class="aui-row">
+            <div class="aui-col-xs-12">
+                <img src="../image/1/14@2x.png">
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="../script/aui-slide.js"></script>
+<script type="text/javascript">
+    var slide = new auiSlide({
+        container:document.getElementById("aui-slide"),
+        // "width":300,
+        "height":226,
+        "speed":300,
+        "autoPlay": 0, //自动播放
+        "pageShow":true,
+        "loop":true,
+        "pageStyle":'dot',
+        'dotPosition':'center'
+    })
+</script>
+</html>
