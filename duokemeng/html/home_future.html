@@ -43,6 +43,10 @@
         .w-100.pull-right {
             float: right;
         }
+        .w-100-buttom{
+            display: block;
+            text-align: center;
+        }
         .part-1 p,
         .part-2 p{
             color: #ffffff !important;
@@ -64,7 +68,8 @@
 <body>
     <section class="aui-content aui-margin-b-15" style="margin-top: 2.5rem;">
         <div class="aui-row part-1">
-            <a href="/building_detail/building_detail.html">
+            <a href="./building_detail/building_detail.html">
+                <!--第一行-->
                 <div class="aui-col-xs-12">
                     <div class="w-100">
                         <img src="../image/3/1.png" style="width:2.5rem;">
@@ -72,15 +77,16 @@
                     </div>
                 </div>
             </a>
+            <!--第二行-左侧-->
             <div class="aui-col-xs-3">
-                <div class="aui-col-xs-12 text-right">
-                    <a href="./building_album/building_album.html">
-                    <div class="w-100 pull-right" style="margin-bottom:2rem;">
-                        <img src="../image/3/6.png" style="width:2.5rem;;">
-                        <p>楼盘相册</p>
+                <a href="./building_album/building_album.html">
+                    <div class="aui-col-xs-12 text-right">
+                        <div class="w-100 pull-right" style="margin-bottom:2rem;">
+                            <img src="../image/3/6.png" style="width:2.5rem;;">
+                            <p>楼盘相册</p>
+                        </div>
                     </div>
-                    </a>
-                </div>
+                </a>
                 <a href="./house_type/house_type.html">
                     <div class="aui-col-xs-12">
                         <div class="w-100 pull-right">
@@ -90,12 +96,14 @@
                     </div>
                 </a>
             </div>
+            <!--第二行-中间-->
             <div class="aui-col-xs-6">
                 <img src="../image/3/0.png">
                 <div class="center-title">楼盘风采</div>
             </div>
+            <!--第二行-右侧-->
             <div class="aui-col-xs-3"> 
-                <a href="/advantage/advantage.html">
+                <a href="./advantage/advantage.html">
                     <div class="aui-col-xs-12">
                         <div class="w-100 pull-left" style="margin-bottom:2rem;">
                             <img src="../image/3/2.png" style="width:2.5rem;;">
@@ -103,7 +111,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="/news/news.html">
+                <a href="./news/news.html">
                     <div class="aui-col-xs-12">
                         <div class="w-100 pull-left">
                             <img src="../image/3/3.png" style="width:2.5rem;;">
@@ -112,16 +120,26 @@
                     </div>
                 </a>
             </div>
-            <a href="/panoramic_view/panoramic_view.html">
-                <div class="aui-col-xs-12">
-                    <div class="w-100">
+            <!--第三行-->
+            <!-- <a href="./panoramic_view/panoramic_view.html"> -->
+<!--                 <div class="aui-col-xs-12">
+                    <div class="w-100-buttom">
                         <img src="../image/3/4.png" style="width:2.5rem;">
                         <p>全景看房</p>
                     </div>
-                </div>
-            </a>
+                </div> -->
         </div>
     </section>
+    <!--第三行-上边注释部分，占位太大,致使跳转到相同链接。-->
+    <a href="./panoramic_view/panoramic_view.html">
+        <section class="aui-col-xs-12">
+            <div class="w-100-buttom">
+                <img src="../image/3/4.png" style="width:2.5rem;">
+                <p>全景看房</p>
+            </div>
+        </section>
+    </a>
+    <!---->
     <section class="aui-content aui-margin-b-10">
         <div class="aui-row part-2 aui-text-center">
             <a href="./online_sale/online_sale.html">

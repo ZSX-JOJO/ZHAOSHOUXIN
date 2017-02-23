@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>actionSheet之选择地图周边</title>
+    <link rel="stylesheet" type="text/css" href="../../css/weui-0.3.0.css" />
+    <style type="text/css">
+    	.container{
+            padding:  15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:;" id="btnActionSheet" class="weui_btn weui_btn_primary">      ActionSheet
+        </a>
+    </div>
+</body>
+<script type="text/javascript" src="../../script/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../../script/weui.js"></script>
+<script type="text/javascript">
+    $(function (){
+    $('#btnActionSheet').on('click', function (){
+        $.weui.actionSheet([{
+            label: '示例菜单',
+            onClick: function (){
+                console.log('click1');
+            }
+        },{
+            label: '示例菜单',
+            onClick: function (){
+                console.log('click2');
+            }
+        },{
+            label: '示例菜单',
+            onClick: function (){
+                console.log('click3');
+            }
+        }]);
+    });
+});
+</script>
+</html>

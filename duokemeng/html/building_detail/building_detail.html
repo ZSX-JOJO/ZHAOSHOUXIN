@@ -1,5 +1,5 @@
 <!-- 周边配套 跳转到 周边地图 未实现-->
-<!DOCTYPE doctype html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,11 @@
                 </title>
                 <link href="../../css/aui.css" rel="stylesheet" type="text/css"/>
                 <link href="../../css/aui-slide.css" rel="stylesheet" type="text/css"/>
+                <link rel="stylesheet" type="text/css" href="../../css/weui-0.3.0.css" />
                 <style type="text/css">
+                .container{
+            padding:  15px;
+        }
                     #tabCon_1{
             display: none;
         }
@@ -222,7 +226,7 @@
                             周边配套
                         </div>
                         <div>
-                            <i class="aui-iconfont aui-icon-more">
+                            <i class="aui-iconfont aui-icon-right" onclick="javascript:;" id="btnActionSheet"><!--此处使用微信的weui.js实现-->
                             </i>
                         </div>
                     </div>
@@ -404,7 +408,7 @@
                         周边配套
                     </div>
                     <div>
-                        <i class="aui-iconfont aui-icon-more">
+                        <i class="aui-iconfont aui-icon-right" onclick="javascript:;" id="btnActionSheet_right"><!--此处使用微信的weui.js实现-->
                         </i>
                     </div>
                 </div>
@@ -426,7 +430,9 @@
     </script>
     <script src="../../script/aui-slide.js" type="text/javascript">
     </script>
-    <script src="../../script/jquery.min.js" type="text/javascript">
+    <script src="../../script/jquery-3.1.1.js" type="text/javascript">
+    </script>
+    <script type="text/javascript" src="../../script/weui.js">
     </script>
     <script type="text/javascript">
         function changeTab(tabCon_number){
@@ -459,5 +465,79 @@
         "pageStyle":'dot', //分页器样式，分dot,line
         'dotPosition':'center' //当分页器样式为dot时控制分页器位置，left,center,right
     })
+    // 周边配置-->地图周边
+    $(function (){
+    $('#btnActionSheet').on('click', function (){
+        $.weui.actionSheet([{
+            label: '学校',
+            onClick: function (){
+                console.log('click1');
+            }
+        },{
+            label: '商场',
+            onClick: function (){
+                console.log('click2');
+            }
+        },{
+            label: '美食',
+            onClick: function (){
+                console.log('click3');
+            }
+        },{
+            label: '医院',
+            onClick: function (){
+                console.log('click4');
+            }
+        },{
+            label: '银行',
+            onClick: function (){
+                console.log('click5');
+            }
+        },{
+            label: '交通',
+            onClick: function (){
+                console.log('click6');
+            }
+        }
+        ]);
+    });
+});
+    // 右tab-->周边配置-->地图周边
+    $(function (){
+    $('#btnActionSheet_right').on('click', function (){
+        $.weui.actionSheet([{
+            label: '学校',
+            onClick: function (){
+                console.log('click1');
+            }
+        },{
+            label: '商场',
+            onClick: function (){
+                console.log('click2');
+            }
+        },{
+            label: '美食',
+            onClick: function (){
+                console.log('click3');
+            }
+        },{
+            label: '医院',
+            onClick: function (){
+                console.log('click4');
+            }
+        },{
+            label: '银行',
+            onClick: function (){
+                console.log('click5');
+            }
+        },{
+            label: '交通',
+            onClick: function (){
+                console.log('click6');
+            }
+        }
+        ]);
+    });
+});
     </script>
 </html>
