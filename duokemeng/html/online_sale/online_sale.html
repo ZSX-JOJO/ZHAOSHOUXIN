@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>在线销售</title>
     <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/weui-0.3.0.css" />
     <style type="text/css">
         .aui-bar-nav {
             background-color: #3aab40;
@@ -65,9 +66,9 @@
                         房源
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="text" placeholder="请选择房源">
+                        <input type="text" placeholder="选择房源..">
                     </div>
-                    <div class="aui-list-item-label-icon">
+                    <div class="aui-list-item-label-icon" onclick="javascript:;" id="btnActionSheet">
                         <i class="aui-iconfont aui-icon-down"></i>
                     </div>
                 </div>
@@ -78,7 +79,7 @@
                         姓名
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="text" value="张三">
+                        <input type="text" placeholder="姓名">
                     </div>
                     <div class="aui-list-item-label-icon">
                         <i class="aui-iconfont aui-icon-info aui-text-success"></i>
@@ -128,9 +129,12 @@
                         类型
                     </div>
                     <div class="aui-list-item-input">
-                        <label><input type="radio" class="aui-radio" checked=""> 认筹</label>
-                        <label><input type="radio" class="aui-radio"> 认购</label>
-                        <label><input type="radio" class="aui-radio"> 小定</label>
+                        <label><input class="aui-radio" type="radio" name="demo" checked="">        认筹
+                        </label>
+                        <label><input class="aui-radio" type="radio" name="demo">认购</label>
+                        <label><input class="aui-radio" type="radio" name="demo">
+                            小定
+                        </label>
                     </div>
                     <div class="aui-list-item-label-icon"></div>
                 </div>
@@ -141,23 +145,33 @@
                 <div class="aui-margin-l-10">付款方式</div>
             </div>
             <div class="aui-card-list-content-padded aui-border-t">
-                <div class="label active">商业贷款</div>
-                <div class="label">组合贷款</div>
-                <div class="label">公积金贷款</div>
-                <div class="label">全款分期</div>
-                <div class="label">全款</div>
+                <label class="label active">商业贷款</label>
+                <label class="label">组合贷款</label>
+                <label class="label">公积金贷款</label>
+                <label class="label">全款分期</label>
+                <label class="label">全款</label>
             </div>
         </div>
         <div class="aui-card-list">
             <div class="aui-card-list-header title">
                 <div class="aui-margin-l-10">付款银行</div>
             </div>
-            <div class="aui-card-list-content-padded aui-border-t">
-                <div class="label active">中国银行</div>
-                <div class="label">工商银行</div>
-                <div class="label">农业银行</div>
-                <div class="label">建设银行</div>
-                <div class="label">招商银行</div>
+            <div class="aui-card-list-content-padded aui-border-t" id="pay_style">
+                <div class="label active" onclick="select_bank()">中国银行</div>
+                <div class="label" onclick="select_bank()">工商银行</div>
+                <div class="label" onclick="select_bank()">农业银行</div>
+                <div class="label" onclick="select_bank()">建设银行</div>
+                <div class="label" onclick="select_bank()">招商银行</div>
+<!--                 <div class="bank_list_show">
+                    <label><input type="checkbox" value="" />中国银行1</label>
+                    <label><input type="checkbox" value="" />工商银行2</label>
+                    <label><input type="checkbox" value="" />建设银行3 </label>
+                </div>
+                <div class="bank_list_hidden" style="display:none;">
+                    <label><input type="checkbox" value="" />中国银行</label>
+                    <label><input type="checkbox" value="" />工商银行</label>
+                    <label><input type="checkbox" value="" />建设银行 </label>
+                </div> -->
             </div>
         </div>
     </section>
@@ -167,4 +181,121 @@
 </body>
 <script type="text/javascript" src="../../script/aui-slide.js"></script>
 <script type="text/javascript" src="../../script/aui.js"></script>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/weui.js"></script>
+<script type="text/javascript" src="../../script/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+    // 付款方式
+    // var div_pay_style1 = document.getElementById('pay_style1');
+    // div_pay_style1.onclick=function(){
+    //     if(this.style.backgroundColor == 'red'){
+    //         this.style.backgroundColor = '#ccc';
+    //     }else{
+    //         this.style.backgroundColor = 'red';
+    //     }
+    // }
+    // var div_pay_style2 = document.getElementById('pay_style2');
+    // div_pay_style2.onclick=function(){
+    //     if(this.style.backgroundColor == 'red'){
+    //         this.style.backgroundColor = '#ccc';
+    //     }else{
+    //         this.style.backgroundColor = 'red';
+    //     }
+    // }
+    // var div_pay_style3 = document.getElementById('pay_style3');
+    // div_pay_style3.onclick=function(){
+    //     if(this.style.backgroundColor == 'red'){
+    //         this.style.backgroundColor = '#ccc';
+    //     }else{
+    //         this.style.backgroundColor = 'red';
+    //     }
+    // }
+    // var div_pay_style4 = document.getElementById('pay_style4');
+    // div_pay_style4.onclick=function(){
+    //     if(this.style.backgroundColor == 'red'){
+    //         this.style.backgroundColor = '#ccc';
+    //     }else{
+    //         this.style.backgroundColor = 'red';
+    //     }
+    // }
+    // var div_pay_style5 = document.getElementById('pay_style5');
+    // div_pay_style5.onclick=function(){
+    //     if(this.style.backgroundColor == 'red'){
+    //         this.style.backgroundColor = '#ccc';
+    //     }else{
+    //         this.style.backgroundColor = 'red';
+    //     }
+    // }
+       // var pay_style = function(array){
+       //  var pay_style_array = [];
+       //      for(var i=0;i<array.lenght;i++)
+       //  pay_style_array.push(array[i]);
+       //      return
+       //      pay_style_array;
+       // };
+       // Array.prototype.each = function(argument){
+       //     for(var i=0,l=this.lenght;i<l;i++){
+       //      argument(this[i],i);
+       //     };
+       // };
+       // getElementByClassName = function(class_status){
+       //      var hasClass =function(w,Name){
+       //          var hasClass =false;
+       //          w.ClassName.split('').each(function(s){
+       //              if (s == Name) hasClass =true;
+       //          });
+       //          return hasClass;
+       //      };
+       //      var elems = document.getElementsByTagName("*");
+       //      var elemList =[];
+       //      pay_style(elems).each(function(e){
+       //          if(hasClass(e,classstatus)){
+       //              elemList.push.(e);
+       //          }
+       //      })
+       //      return pay_style(
+       //          elemList);
+       // };
+       // function change_status(obj){
+       //  var div = document.getElementsByClassName("pay_style_list")[0].getElementsByTagName("div");
+       //  fot (var i=0;i<div.length;i++){
+       //      div[i].className="";
+       //  }
+       //  obj.className="active";
+       // };
+       function radioShow(){
+            var div=document.getElementById("pay_style").getElementsByTagName("div");
+            for(i=0;i<div.length;i++){
+            if(select_bank[i].checked){
+            div[i].style.display="block";
+            }
+            else{
+            div[i].style.display="none";
+            }
+            }
+            }
+
+
+
+    $(function (){
+    $('#btnActionSheet').on('click', function (){
+        $.weui.actionSheet([{
+            label: '多客檬A区',
+            onClick: function (){
+                console.log('click1');
+            }
+        },{
+            label: '多客檬B区',
+            onClick: function (){
+                console.log('click2');
+            }
+        },{
+            label: '多客檬C区',
+            onClick: function (){
+                console.log('click3');
+            }
+        }]);
+    });
+});
+</script>
 </html>
