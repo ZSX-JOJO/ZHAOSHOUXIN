@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>nav.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+#write { overflow-x: auto; }
+table tr { border-top: 1px solid rgb(204, 204, 204); background-color: white; margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) { 
+}
+@media print { 
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.117647); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><p></p><h1><a name='header-c7' class='md-header-anchor '></a>整理自己的常用书签</h1><p>​		`书签2全部为不正经的东西！请自行斟酌！虽然自己收藏许久，但却不怎么浏览；正经网站都浏览不过来，哪有时间去照顾不正经的东西！网址本身都没毛病！如果打不开那一定是你访问互联网的姿势不对，你换个姿势就可以访问了，书签最后面会分享你懂的软件或者网址，祝你早日fq！</p><h2><a name='header-c10' class='md-header-anchor '></a>1 ：Google&amp;度娘</h2><h3><a name='header-c11' class='md-header-anchor '></a>1.1：Google  <a href='www.google.com' target='_blank' >www.google.com</a></h3><h4><a name='header-c12' class='md-header-anchor '></a>Google大法就是好！</h4><h3><a name='header-c13' class='md-header-anchor '></a>1.2：Google翻译 <a href='https://translate.google.com' target='_blank' >https://translate.google.com</a></h3><h4><a name='header-c14' class='md-header-anchor '></a>国内就用 有道翻译，国外就用 Google翻译。</h4><h3><a name='header-c15' class='md-header-anchor '></a>1.3：YouTube <a href='www.youtube.com' target='_blank' >www.youtube.com</a></h3><h4><a name='header-c16' class='md-header-anchor '></a>看一些被禁的视频，有趣的东西比较多。</h4><h3><a name='header-c17' class='md-header-anchor '></a>1.4：百度 <a href='www.baidu.com' target='_blank' >www.baidu.com</a></h3><h4><a name='header-c18' class='md-header-anchor '></a>这是不得不用的。</h4><h3><a name='header-c19' class='md-header-anchor '></a>1.5：百度脑图 <a href='http://naotu.baidu.com/home' target='_blank' >http://naotu.baidu.com/home</a></h3><h4><a name='header-c20' class='md-header-anchor '></a>在线思维导图，真的是神器。</h4><h3><a name='header-c21' class='md-header-anchor '></a>1.6：百度云 <a href='https://cloud.baidu.com/' target='_blank' >https://cloud.baidu.com/</a></h3><h4><a name='header-c22' class='md-header-anchor '></a>不是百度云盘，是购买服务器的，应该有用的吧。</h4><h3><a name='header-c23' class='md-header-anchor '></a>1.7：维基百科 <a href='https://www.wikipedia.org/' target='_blank' >https://www.wikipedia.org/</a></h3><h4><a name='header-c24' class='md-header-anchor '></a>为什么不放百度百科？are you kidding me？</h4><h2><a name='header-c25' class='md-header-anchor '></a>2：营养快线（真的是营养，我可以去秋名山赛车吗？）</h2><h3><a name='header-c26' class='md-header-anchor '></a>2.1：草榴（1024）<a href='http://www.viidii.info/?http://t66y______com&z'>http://t66y.com</a></h3><h4><a name='header-c27' class='md-header-anchor '></a>这个网址都应该知道吧，哎 连个码都没有，遗憾。</h4><h3><a name='header-c28' class='md-header-anchor '></a>2.2：91porn <a href='http://91porn.com/' target='_blank' >http://91porn.com/</a></h3><h4><a name='header-c29' class='md-header-anchor '></a>此91 不是91手机助手，知道草榴会不知道91？</h4><h3><a name='header-c30' class='md-header-anchor '></a>2.3：YouPorn <a href='http://www.youporn.bz/' target='_blank' >http://www.youporn.bz/</a></h3><h4><a name='header-c31' class='md-header-anchor '></a>欧美风格，站比较大（貌似很出名）。</h4><h3><a name='header-c32' class='md-header-anchor '></a>2.4：绅士道 <a href='https://moxacg.moe/' target='_blank' >https://moxacg.moe/</a></h3><h4><a name='header-c33' class='md-header-anchor '></a>全部是二次元的，鄙人实在是不喜欢（我猜你们有喜欢的就发出来）</h4><h3><a name='header-c34' class='md-header-anchor '></a>2.5：任君所求 <a href='http://www.renjunsuoqiu.com/' target='_blank' >http://www.renjunsuoqiu.com/</a></h3><h4><a name='header-c35' class='md-header-anchor '></a>全是小黄文，需要下载手机客户端。不怎么感兴趣。</h4><h3><a name='header-c36' class='md-header-anchor '></a>2.6：又一个二次元 <a href='https://nhentai.net/' target='_blank' >https://nhentai.net/</a></h3><h4><a name='header-c37' class='md-header-anchor '></a>二次元的，懒的介绍，自己去看。（最讨厌萝莉了！）</h4><h3><a name='header-c38' class='md-header-anchor '></a>2.7：日本成人影片情报站（全部有码） <a href='https://avmo.pw/' target='_blank' >https://avmo.pw/</a></h3><h4><a name='header-c39' class='md-header-anchor '></a>看各种老师，看各种类别，都是车牌，老司机必修课。</h4><h3><a name='header-c40' class='md-header-anchor '></a>2.8：日本成人影片情报站（全部无码） <a href='https://avso.pw/' target='_blank' >https://avso.pw/</a></h3><h4><a name='header-c41' class='md-header-anchor '></a>里面有部分欧美系列，但是较少。</h4><h3><a name='header-c42' class='md-header-anchor '></a>2.9：世界第一中文成人娱乐网站  <a href='http://m.thisav.com/' target='_blank' >http://m.thisav.com/</a></h3><h4><a name='header-c43' class='md-header-anchor '></a>这个名字很霸气，资源很多。</h4><h3><a name='header-c44' class='md-header-anchor '></a>2.10：疯AV免费成人娱乐 <a href='http://airav.cc/' target='_blank' >http://airav.cc/</a></h3><h4><a name='header-c45' class='md-header-anchor '></a>用来搜车牌，各种分类。</h4><h3><a name='header-c46' class='md-header-anchor '></a>2.11：Free Porn <a href='http://redporn.net/' target='_blank' >http://redporn.net/</a></h3><h4><a name='header-c47' class='md-header-anchor '></a>和You Porn类似（貌似很出名）</h4><h3><a name='header-c48' class='md-header-anchor '></a>2.12：Best Porn <a href='http://www.bestporntube.com' target='_blank' >http://www.bestporntube.com</a></h3><h4><a name='header-c49' class='md-header-anchor '></a>Porn系列见怪不怪了。</h4><h3><a name='header-c50' class='md-header-anchor '></a>2.13：javdude <a href='http://www.javdude.com/' target='_blank' >http://www.javdude.com/</a></h3><h4><a name='header-c51' class='md-header-anchor '></a>自己上去看</h4><h3><a name='header-c52' class='md-header-anchor '></a>2.14：porntime <a href='http://porntime.ws/' target='_blank' >http://porntime.ws/</a></h3><h4><a name='header-c53' class='md-header-anchor '></a>跨平台，需要下载播放器播放，客户端很漂亮，不是你去那种垃圾网站需要你		安装客户端才可以看的网站所能比的。需要挂代理。种子感觉不太健康。</h4><h3><a name='header-c54' class='md-header-anchor '></a>2.15：porn hub <a href='http://www.pornhub.com/' target='_blank' >http://www.pornhub.com/</a></h3><h4><a name='header-c55' class='md-header-anchor '></a>类似的很多。。。</h4><h3><a name='header-c56' class='md-header-anchor '></a>2.16： Tokyo-hot官方网站 <a href='http://my.tokyo-hot.com/' target='_blank' >http://my.tokyo-hot.com/</a></h3><h4><a name='header-c57' class='md-header-anchor '></a>Tokyo-hot的动感音乐 会不知道？</h4><h3><a name='header-c58' class='md-header-anchor '></a>2.17：老司机磁力分享 <a href='https://www.gavbus4.com/' target='_blank' >https://www.gavbus4.com/</a></h3><h4><a name='header-c59' class='md-header-anchor '></a>日本、欧美、有码无码等等，老司机必经之路。</h4><h3><a name='header-c60' class='md-header-anchor '></a>2.18： 假草榴 <a href='http://www.emytu.com/' target='_blank' >http://www.emytu.com/</a></h3><h4><a name='header-c61' class='md-header-anchor '></a>关键是不需要fq，资源差不多与真草榴同步，这还是不错的。</h4><h3><a name='header-c62' class='md-header-anchor '></a>2.19： AVfun  <a href='http://www.avfun20.com/' target='_blank' >http://www.avfun20.com/</a></h3><h4><a name='header-c63' class='md-header-anchor '></a>第一眼看成AcFun的请举手，关键是网站排版和缺B乐一毛一样。</h4><h3><a name='header-c64' class='md-header-anchor '></a>2.20：番号库 <a href='http://www.icpmp.com/fanhao/' target='_blank' >http://www.icpmp.com/fanhao/</a></h3><h4><a name='header-c65' class='md-header-anchor '></a>算是可以吧，但是番号不全（我目前查看番号很不全，但有总归优于无）。</h4><h3><a name='header-c66' class='md-header-anchor '></a>2.21：宅福利 <a href='http://zhaofuli.biz/index.html' target='_blank' >http://zhaofuli.biz/index.html</a></h3><h4><a name='header-c67' class='md-header-anchor '></a>番号全，但是老师不多，但番号只是其中一个分类还有其他。</h4><h3><a name='header-c68' class='md-header-anchor '></a>2.22:  <a href='https://www.torrentkitty.tv/' target='_blank' >https://www.torrentkitty.tv/</a></h3><h4><a name='header-c69' class='md-header-anchor '></a>看网址名字就知道是干什么的！此乃神器！（搜磁力必备）</h4><h3><a name='header-c70' class='md-header-anchor '></a>2.23： BT搜搜 <a href='http://www.btyunsou.com/' target='_blank' >http://www.btyunsou.com/</a></h3><h4><a name='header-c71' class='md-header-anchor '></a>bt搜索，搜的很全，找资源都可以去此。</h4><h3><a name='header-c72' class='md-header-anchor '></a>2.24：什么bt快搜、bt蚂蚁、等等懒的放链接了。</h3><h3><a name='header-c73' class='md-header-anchor '></a>2.25:  AV福利合集 <a href='http://www.ilove1024.com' target='_blank' >http://www.ilove1024.com</a></h3><h4><a name='header-c74' class='md-header-anchor '></a>可以看一下这个站长整理的，然后自己去2.1-2.24下载啊！这么简单的道理都不懂？</h4><h2><a name='header-c75' class='md-header-anchor '></a>3：图片类</h2><h3><a name='header-c76' class='md-header-anchor '></a>3.1：免费图片 <a href='https://pixabay.com/' target='_blank' >https://pixabay.com/</a></h3><h4><a name='header-c77' class='md-header-anchor '></a>免费获取各种图片（别告诉我你用来做壁纸！）</h4><h3><a name='header-c78' class='md-header-anchor '></a>3.2：Unsplash <a href='https://unsplash.com/' target='_blank' >https://unsplash.com/</a></h3><h3><a name='header-c79' class='md-header-anchor '></a>3.3：interfacelif <a href='https://interfacelift.com/' target='_blank' >https://interfacelift.com/</a></h3><h2><a name='header-c80' class='md-header-anchor '></a>4：学姿势（长点见识）</h2><h3><a name='header-c81' class='md-header-anchor '></a>4.1：知乎 <a href='http://www.zhihu.com/' target='_blank' >http://www.zhihu.com/</a></h3><h4><a name='header-c82' class='md-header-anchor '></a>逛了好几年没怎么回答个问题，主要是怕露怯（更重要的是不想装逼，知乎里有部分用户是可以的，但其他很多就是装B贩子，哪来的这么多优越感？？）。可以在此处长点眼界，但千万不要认为可以在这个地方学到知识！这个地方学不到知识！这个地方学不到知识！这个地方学不到知识！说了三遍了。知乎改版后感觉不怎么好了（但是有脚本可以显示旧版本知乎）</h4><h3><a name='header-c83' class='md-header-anchor '></a>4.2：果壳 <a href='http://www.guokr.com/' target='_blank' >http://www.guokr.com/</a></h3><h4><a name='header-c84' class='md-header-anchor '></a>只看不说</h4><h3><a name='header-c85' class='md-header-anchor '></a>4.3：豆瓣 <a href='https://www.douban.com/' target='_blank' >https://www.douban.com/</a></h3><h4><a name='header-c86' class='md-header-anchor '></a>只是为了找一些电影</h4><h3><a name='header-c87' class='md-header-anchor '></a>4.4： 简书 <a href='http://www.jianshu.com/' target='_blank' >http://www.jianshu.com/</a></h3><h4><a name='header-c88' class='md-header-anchor '></a>只关注了部分专题</h4><h3><a name='header-c89' class='md-header-anchor '></a>4.5：福利吧 <a href='http://www.fuliba.net/' target='_blank' >http://www.fuliba.net/</a></h3><h4><a name='header-c90' class='md-header-anchor '></a>这是个正经网站，看到不正经的东西，说明你不是好孩子。</h4><h3><a name='header-c91' class='md-header-anchor '></a>4.6：异次元 <a href='www.iplaysoft.com/' target='_blank' >www.iplaysoft.com/</a></h3><h4><a name='header-c92' class='md-header-anchor '></a>主要是在上面可以发现一些有趣的程序，和小众软件差不多。</h4><h3><a name='header-c93' class='md-header-anchor '></a>4.7：小众软件 <a href='http://www.appinn.com/' target='_blank' >http://www.appinn.com/</a></h3><h4><a name='header-c94' class='md-header-anchor '></a>小众软件不代表软件小众，里面有各种神器的小软件，相见恨晚。</h4><h3><a name='header-c95' class='md-header-anchor '></a>4.8：大软坊 <a href='http://app.hustonline.net/' target='_blank' >http://app.hustonline.net/</a></h3><h4><a name='header-c96' class='md-header-anchor '></a>看看人家学校的学生，再看看我这个垃圾！</h4><h3><a name='header-c97' class='md-header-anchor '></a>4.9：卡饭论坛 <a href='http://bbs.kafan.cn/' target='_blank' >http://bbs.kafan.cn/</a></h3><h4><a name='header-c98' class='md-header-anchor '></a>以前每天都逛，现在半个月逛一次，整天折腾杀软？有没有点正事儿？给身边的人装系统已经让我百毒不侵，他们爱用啥就用啥，与我无关。还有用杀毒软件用出来优越感的。。。做好自己就行，少管他人闲事。</h4><h3><a name='header-c99' class='md-header-anchor '></a>4.10：远景论坛 <a href='www.pcbeta.com' target='_blank' >www.pcbeta.com</a></h3><h4><a name='header-c100' class='md-header-anchor '></a>Windows系统已经折腾的恶心了，所以就玩黑苹果去了。现在貌似打不开了（需要修改hosts文件，我自己保存了许多黑苹果专区的网页，嘿嘿实在不行去国外论坛看，反正远景大部分都是扒国外论坛的内容进行二次加工）不知道什么时候恢复正常（感觉要真的死了，哎可惜了这么好的论坛，可惜了我的账号）。</h4><h3><a name='header-c101' class='md-header-anchor '></a>4.11：tonymacx86  <a href='https://www.tonymacx86.com/' target='_blank' >https://www.tonymacx86.com/</a></h3><h4><a name='header-c102' class='md-header-anchor '></a>这才是真正搞黑苹果的论坛，它应该倒不了吧。</h4><h3><a name='header-c103' class='md-header-anchor '></a>4.12：insanelymac  <a href='http://www.insanelymac.com/' target='_blank' >http://www.insanelymac.com/</a></h3><h4><a name='header-c104' class='md-header-anchor '></a>同样是搞黑苹果的论坛，总会又一个可以让你好好折腾黑苹果的地方。</h4><h3><a name='header-c105' class='md-header-anchor '></a>4.13：twrp <a href='https://twrp.me/' target='_blank' >https://twrp.me/</a></h3><h4><a name='header-c106' class='md-header-anchor '></a>折腾完电脑了，再来折腾手机吧，著名第三方recovery，闲着没事少刷机，手机差不多能用就行，手机系统坏了你再刷。整天刷机刷机刷机，你有点正事不？</h4><h3><a name='header-c107' class='md-header-anchor '></a>4.14：吾爱破解 <a href='http://www.52pojie.cn/' target='_blank' >http://www.52pojie.cn/</a></h3><h4><a name='header-c108' class='md-header-anchor '></a>知道的人应该挺多的吧，这里不是让你下载破解软件的！</h4><h3><a name='header-c109' class='md-header-anchor '></a>4.15：看雪安全论坛 <a href='http://bbs.pediy.com/' target='_blank' >http://bbs.pediy.com/</a></h3><h4><a name='header-c110' class='md-header-anchor '></a>与上同理，俺这水平，进去只是为了看看，看看而已。。。</h4><h3><a name='header-c111' class='md-header-anchor '></a>4.16：学破解论坛 <a href='http://www.xuepojie.com/' target='_blank' >http://www.xuepojie.com/</a></h3><h4><a name='header-c112' class='md-header-anchor '></a>由吾爱破解大神 小生我怕怕 的徒弟 shark恒创建，论坛挺不错，除非你想学软件逆向，不然这些论坛对你没用。</h4><h3><a name='header-c113' class='md-header-anchor '></a>4.17: 0daydowm <a href='http://www.0daydown.com/' target='_blank' >http://www.0daydown.com/</a></h3><h4><a name='header-c114' class='md-header-anchor '></a>主要是分享一些破解软件，更新够及时。</h4><h2><a name='header-c115' class='md-header-anchor '></a>5：游戏类</h2><h3><a name='header-c116' class='md-header-anchor '></a>5.1：steam  网址老少爷们都应该知道吧？</h3><h4><a name='header-c117' class='md-header-anchor '></a>网址就不放了，注册账号-&gt; 下载steam客户端-&gt;登录账号-&gt;选择自己喜欢的游戏-&gt; 购买-&gt;下载游戏-&gt;开始玩耍</h4><h3><a name='header-c118' class='md-header-anchor '></a>5.2:	游民星空 <a href='http://www.gamersky.com/' target='_blank' >http://www.gamersky.com/</a></h3><h4><a name='header-c119' class='md-header-anchor '></a>不想花钱就去玩盗版,但千万别因此瞧不起正版，你有的玩就行了，你他妈还BB啥？逛此网站别看底部评论，会拉低你的智商！</h4><h3><a name='header-c120' class='md-header-anchor '></a>5.3：游侠网 <a href='http://www.ali213.net/' target='_blank' >http://www.ali213.net/</a></h3><h4><a name='header-c121' class='md-header-anchor '></a>同理，都是盗版下载站</h4><h3><a name='header-c122' class='md-header-anchor '></a>5.4：3DM  <a href='http://www.3dmgame.com/' target='_blank' >http://www.3dmgame.com/</a></h3><h4><a name='header-c123' class='md-header-anchor '></a>又叫三大妈，感觉游戏更新的最快。</h4><hr /><h3><a name='header-c174' class='md-header-anchor '></a>真爱生命，远离腾讯游戏！杜绝小马哥，从你我做起！感谢3DM、游侠、游民、陪我度过大学时光！玩盗版游戏就老老实实的少BB，有得玩就不错了，人家给你破解帮你汉化，在评论里你还喷，有能力就去支持正版，没智商就老老实实玩盗版。目前正在慢慢还以前欠下的债，准备将以前玩过的大作慢慢都买回正版，以前我没得选择,现在我只想做个好人！</h3><hr /><p></p><h2><a name='header-c124' class='md-header-anchor '></a>6：个人网站系列（主要是为了下载一些软件）</h2><h3><a name='header-c125' class='md-header-anchor '></a>6.1：zd423 <a href='http://www.zdfans.com/' target='_blank' >http://www.zdfans.com/</a></h3><h4><a name='header-c126' class='md-header-anchor '></a>站长好像叫做黄治德（个人猜测），专注于QQ绿化，网站各种软件很多。</h4><h3><a name='header-c127' class='md-header-anchor '></a>6.2：蓝点网 <a href='https://www.landiannews.com/' target='_blank' >https://www.landiannews.com/</a></h3><h4><a name='header-c128' class='md-header-anchor '></a>最开始在贴吧Win8吧认识的,见证了其网站的不断更新变化。</h4><h3><a name='header-c129' class='md-header-anchor '></a>6.3：N软网 <a href='http://www.nruan.com/' target='_blank' >http://www.nruan.com/</a></h3><h4><a name='header-c130' class='md-header-anchor '></a>最开始装Win8系列时找激活码经常用，现在无所谓了反正我的Win10洗白了。但是这个网站还可以看到其他的资讯还算不错。</h4><h3><a name='header-c131' class='md-header-anchor '></a>6.4：善用佳软 <a href='https://xbeta.info/' target='_blank' >https://xbeta.info/</a></h3><h4><a name='header-c132' class='md-header-anchor '></a>一个互联网义工</h4><h3><a name='header-c133' class='md-header-anchor '></a>6.5：翳飘遥 <a href='http://www.shaoit.com/' target='_blank' >http://www.shaoit.com/</a></h3><h4><a name='header-c134' class='md-header-anchor '></a>网站侧边栏很漂亮。。。网站内容也不错。</h4><h3><a name='header-c135' class='md-header-anchor '></a>6.6：精品绿色便携软件 <a href='http://www.portablesoft.org/' target='_blank' >http://www.portablesoft.org/</a></h3><h3><a name='header-c136' class='md-header-anchor '></a>6.7：大眼仔旭 <a href='http://www.dayanzai.me/' target='_blank' >http://www.dayanzai.me/</a></h3><h4><a name='header-c137' class='md-header-anchor '></a>会分享一些你没见过的软件，但是下载处写着“转载不写明出处会得尖锐湿疣”真的好狠。。。</h4><h3><a name='header-c138' class='md-header-anchor '></a>6.7：qiuquan <a href='http://www.qiuquan.cc/' target='_blank' >http://www.qiuquan.cc/</a></h3><h4><a name='header-c139' class='md-header-anchor '></a>主要修改去广告绿化国产软件，需要下载各种国产视频客户端的可以去此。</h4><h3><a name='header-c140' class='md-header-anchor '></a>6.8：无约而来 <a href='http://zxkh19501.blog.163.com/' target='_blank' >http://zxkh19501.blog.163.com/</a></h3><h4><a name='header-c141' class='md-header-anchor '></a>此人专注于Windows系统精简，做出的系统干净、易用、无捆绑。不喜欢msdn原版系统的可以去下载此人制作的系统，装完后和原版系统没差别。此人又被称作“无约大师”，是一个系统狂人。你需要做的就是百度 无约而来。</h4><h3><a name='header-c142' class='md-header-anchor '></a>6.9：MSDN 我告诉你 <a href='http://www.itellyou.cn/' target='_blank' >http://www.itellyou.cn/</a></h3><h4><a name='header-c143' class='md-header-anchor '></a>这个主要是下载Windows原版镜像的（就是原版系统啊！）。这个网站存在多年了装系统下载镜像时都去此网站，真乃业界良心！其他链接都是假网址！！！当然微软的MSDN这个肯定是正版，有钱的请去订阅MSDN支持微软。</h4><h3><a name='header-c144' class='md-header-anchor '></a>6.10：微PE <a href='http://www.wepe.com.cn/' target='_blank' >http://www.wepe.com.cn/</a></h3><h4><a name='header-c145' class='md-header-anchor '></a>微pe是网上目前不可多得的干净绿色无捆绑的PE之一，作者为原  通用PE 的作者李培聪（通用PE4.0是其最后的作品！so现在网上的通用pe都是假的！）。PE即Windows预安装环境，个人能力出众的可以自己制作PE（网上教程一堆，但是需要功夫给啃完），总而言之，微PE你值得拥有！！！</h4><h3><a name='header-c163' class='md-header-anchor '></a>6.11：IT天空 <a href='https://www.itsk.com' target='_blank' >https://www.itsk.com</a></h3><h4><a name='header-c165' class='md-header-anchor '></a>这个主要是为了下载驱动的，例如你的Win7装完后什么驱动都没有，就要需要去此网站下载驱动。他们整合的驱动很好用，可以做到无人值守，一键装驱动这都不是事儿。其次，此网站还制作了一些系统封装工具，可以自己制作一些自己使用的系统。</h4><h3><a name='header-c167' class='md-header-anchor '></a>6.12：系统激活 </h3><h4><a name='header-c169' class='md-header-anchor '></a>使用秘钥：在线激活or挂VPN打电话（推荐美国或者英国）；还可以使用激活工具激活，小马激活目前网上全部是假网站！！！小马激活作者 多年前就不制作小马激活工具了！！！！</h4><h3><a name='header-c203' class='md-header-anchor '></a>6.13：火萤视频桌面 <a href='http://rrabbit.cc.huoying666.com/' target='_blank' >http://rrabbit.cc.huoying666.com/</a></h3><h4><a name='header-c208' class='md-header-anchor '></a>可以将视频作为桌面，挺好玩。关键是免费。steam有一款wallpaper engine软件与此类似但是需要￥18。</h4><hr /><h3><a name='header-c148' class='md-header-anchor '></a>以上除了书签1可以看做是正经事情，其他的都可以算可有可无的，你保存了也就多了个书签而已，更何况你保存了也不一定会去看。下面开始分享正儿八经的好网址（营养更足！一站更比六站强！这是真真儿的）</h3><hr /><h2><a name='header-c151' class='md-header-anchor '></a> 开始学习了！</h2><h2><a name='header-c187' class='md-header-anchor '></a>7：学知识系列</h2><h3><a name='header-c189' class='md-header-anchor '></a>7.1：编程学习网 <a href='http://www.phpxs.com/' target='_blank' >http://www.phpxs.com/</a></h3><h3><a name='header-c191' class='md-header-anchor '></a>7.2：Python <a href='http://www.pythontip.com/' target='_blank' >http://www.pythontip.com/</a></h3><h3><a name='header-c193' class='md-header-anchor '></a>7.3：菜鸟教程 <a href='http://www.runoob.com/' target='_blank' >http://www.runoob.com/</a></h3><h3><a name='header-c195' class='md-header-anchor '></a>7.4：廖雪峰个人网站 <a href='http://www.liaoxuefeng.com/' target='_blank' >http://www.liaoxuefeng.com/</a></h3><h3><a name='header-c197' class='md-header-anchor '></a>7.5：实验楼 <a href='https://www.shiyanlou.com/' target='_blank' >https://www.shiyanlou.com/</a></h3><h3><a name='header-c199' class='md-header-anchor '></a>7.6：w3school <a href='http://www.w3school.com.cn/' target='_blank' >http://www.w3school.com.cn/</a></h3><h3><a name='header-c227' class='md-header-anchor '></a>7.7：CSDN <a href='http://www.csdn.net/' target='_blank' >http://www.csdn.net/</a></h3><h3><a name='header-c201' class='md-header-anchor '></a>7.7：网易云课堂、腾讯课堂、百度课堂、慕课网、极客学院</h3><hr /><h2><a name='header-c217' class='md-header-anchor '></a>8： 一些前端网站</h2><h3><a name='header-c229' class='md-header-anchor '></a>8.1：<a href='http://www.raphaelfabeni.com.br/' target='_blank' >http://www.raphaelfabeni.com.br/</a></h3><h3><a name='header-c231' class='md-header-anchor '></a>8.2：<a href='http://codepen.io/' target='_blank' >http://codepen.io/</a></h3><h4><a name='header-c233' class='md-header-anchor '></a>		通过H5、CSS3、JS实现的各种有趣的东西。</h4><h3><a name='header-c235' class='md-header-anchor '></a>8.3：<a href='http://www.bootcss.com/' target='_blank' >http://www.bootcss.com/</a></h3><h4><a name='header-c257' class='md-header-anchor '></a>		Bootstrap中文网</h4><h3><a name='header-c244' class='md-header-anchor '></a>8.4：<a href='http://cn.vuejs.org/' target='_blank' >http://cn.vuejs.org/</a></h3><h4><a name='header-c250' class='md-header-anchor '></a>		Vue</h4><h3><a name='header-c246' class='md-header-anchor '></a>8.5：<a href='https://weui.io/weui.js/' target='_blank' >https://weui.io/weui.js/</a></h3><h4><a name='header-c252' class='md-header-anchor '></a>		微信 Web样式库</h4><h3><a name='header-c248' class='md-header-anchor '></a>8.6：<a href='http://www.swiper.com.cn/' target='_blank' >http://www.swiper.com.cn/</a></h3><h4><a name='header-c262' class='md-header-anchor '></a>		移动端触摸滑动插件</h4><h3><a name='header-c264' class='md-header-anchor '></a>8.7：<a href='http://www.iconfont.cn/plus' target='_blank' >http://www.iconfont.cn/plus</a></h3><h4><a name='header-c266' class='md-header-anchor '></a>		阿里巴巴矢量图标库 </h4><h3><a name='header-c268' class='md-header-anchor '></a>8.8：<a href='https://icomoon.io/' target='_blank' >https://icomoon.io/</a></h3><h4><a name='header-c270' class='md-header-anchor '></a>		ico</h4><h3><a name='header-c272' class='md-header-anchor '></a>8.9：<a href='http://cssicon.space/#/' target='_blank' >http://cssicon.space/#/</a></h3><h4><a name='header-c274' class='md-header-anchor '></a>		CSS   icon</h4><hr /><h4><a name='header-c299' class='md-header-anchor '></a>未完待续。。。。。。。。其他还有一些在线古籍资源、安全向博客、影视类网站、</h4><p></p></div>
+</body>
+</html>
