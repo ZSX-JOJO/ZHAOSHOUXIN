@@ -1,0 +1,29 @@
+div.select.open{
+    background:url("../img/greenBtn.png") no-repeat;
+}
+.selectUL{
+    position:absolute;
+    padding:0;
+    margin:0;
+    list-style:none;
+    border:1px solid #d7d7d7;
+    border-top:none;
+      border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+    
+}
+.selectUL li{
+    height:70px;
+    line-height:70px;
+    padding-left:30px;
+    cursor:pointer;
+      background: #ffffff;
+}
+.selectUL li:hover{
+    background:#d7d7d7;
+}
+.selectUL li.focus{
+    background:url("../img/selected.png") no-repeat;
+    background-size: cover;
+  background-position: 100%;
+}

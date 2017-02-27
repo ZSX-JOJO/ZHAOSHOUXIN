@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>房贷计算结果</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	</head>
+	<body>
+	    <div class="header">
+	        <div class="container"><img src="../../image/loan_calculator/header.png" /></div>
+	    </div>
+		<div class="jsqjg">
+			<div class="container">
+				<form name="jsqjg">
+					<div class="warpper fkze">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									房款总额:
+								</div>
+								<div class="t2 t" id="fkze">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									贷款总额:
+								</div>
+								<div class="t2 t" id="dkze">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									还款总额:
+								</div>
+								<div class="t2 t" id="hkze">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									支付利息:
+								</div>
+								<div class="t2 t" id="ZFLX">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper sqfk">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									首期付款:
+								</div>
+								<div class="t2 t" id="SQFK">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									贷款月数:
+								</div>
+								<div class="t2 t" id="DKYS">
+									240
+								</div>
+								<div class="t3">
+									月
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									按揭年数:
+								</div>
+								<div class="t2 t" id="AJNS">
+									13000000
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper s">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									月均还款:
+								</div>
+								<div class="t2 t tt debj">
+									<div class="w">
+										<div class="item">
+											<span>1月</span>
+											<span class="yjhk">9575元</span>
+										</div>
+										<div class="item">
+											<span>2月</span>
+											<span class="yjhk">9575元</span>
+										</div>
+										<div class="item">
+											<span>1月</span>
+											<span class="yjhk">9575元</span>
+										</div>
+										<div class="item">
+											<span>1月</span>
+											<span class="yjhk">2465元</span>
+										</div>
+										<div class="item">
+											<span>1月</span>
+											<span class="yjhk">2465元</span>
+										</div>
+										<div class="item">
+											<span>1月</span>
+											<span class="yjhk">2465元</span>
+										</div>
+									</div>
+								</div>
+								<div class="t2 t tt debx"></div>
+								<div class="t3"></div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1 e">
+									<span>*</span>以上结果仅供参考
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="bd s">
+							<button type="button">
+								重新计算
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../../script/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			console.log(localStorage.DKZE);
+			if(localStorage.flag==1){
+				if(localStorage.jsfs=="2"){
+					$(".warpper.fkze").hide();
+			$(".warpper.sqfk").hide();
+				}
+				$("#fkze").text(localStorage.FKZE);
+			$("#dkze").text(localStorage.DKZE);
+			$("#hkze").text(localStorage.HKZE);
+			$("#ZFLX").text(localStorage.ZFLX);
+			$("#SQFK").text(localStorage.SQFK);
+			$("#DKYS").text(localStorage.DKYS);
+			$("#AJNS").text(localStorage.AJNS);
+			$(".debx").text(localStorage.YJHK);
+			$(".debj").hide();
+			}
+			else if(localStorage.flag==2){
+				$("#dkze").text(localStorage.DKZE);
+			$("#hkze").text(localStorage.HKZE);
+			$("#ZFLX").text(localStorage.ZFLX);
+			$("#DKYS").text(localStorage.DKYS);
+			$("#AJNS").text(localStorage.AJNS);
+			$(".debx").hide();
+			$(".warpper.fkze").hide();
+			$(".warpper.sqfk").hide();
+			if(localStorage.dklb=="3"){
+				var list1=getRepaymentList(localStorage.ZDKMoney,localStorage.zperLV,localStorage.DKYS);
+				var list2=getRepaymentList(localStorage.ZDKMoney1,localStorage.zperLV1,localStorage.DKYS);
+				console.log(localStorage.ZDKMoney1);
+				console.log(localStorage.zperLV1);
+				console.log(localStorage.DKYS);
+				console.log(list2);
+				var count=listToal(list1,list2);
+				$("#hkze").text(FixTwo(count));
+				$("#ZFLX").text(FixTwo(eval(count-localStorage.DKZE)));
+			}else{
+				var list=getRepaymentList(localStorage.DKZE,localStorage.perLV,localStorage.DKYS);
+				console.log(list);
+				var items="";
+				var count=0;
+				for(key in list){
+					count=(list[key]-0)+(count-0);
+					items+="<div class='item'><span>"+eval(key-0+1)+"月</span><span>"+FixTwo(list[key])+"元</span></div>";
+				}
+				$(".debj .w").html(items);
+				$("#hkze").text(FixTwo(count));
+				$("#ZFLX").text(FixTwo(eval(count-localStorage.DKZE)));
+			}
+			}
+			
+		}) ;
+		$(".jsqjg button").click(function(){
+			location.href="loan_calculator.html";
+		});
+		
+			function calcAverageCapital(total, monthlyRate, monthTotal, repayedMoney) {
+				var monthPay = (total / monthTotal) + (total - repayedMoney) * monthlyRate;
+				return [monthPay, monthPay + repayedMoney];
+			}
+
+			/**
+			计算所有月份的还款额
+			@ param 贷款总额
+			@ param 月利率
+			@ param 贷款月数
+			**/
+			function getRepaymentList(totalMoney, monthlyRate, totalMonth) {
+				var repayedMoney = 0;
+				var list = new Array();
+				for(var i=0; i< totalMonth; i++) {
+					var temp = calcAverageCapital(totalMoney, monthlyRate, totalMonth, repayedMoney);
+					repayedMoney = temp[1];
+					list[i] = temp[0];
+				}
+
+				return list;
+			}
+
+			/**
+			 计算首月还款额和每月递减金额
+			 **/
+			function calc1() {
+				// console.log(calcAverageCapital(1000000, 5.4/1200, 30*12));
+				var total = 1000000;
+				var monthlyRate = 5.4 / 1200;
+				var monthTotal = 360;
+				console.log((total / monthTotal) + total * monthlyRate);
+				console.log((total / monthTotal) * monthlyRate);
+			}
+			function FixTwo(n){
+       	n=n+"";
+       	if(n.indexOf(".")==-1)
+       	return n;
+       	n=eval((n-0)+0.004);
+       return(Math.round(n*100)/100);
+       }
+       function listToal(list1,list2){
+       	var count=0;
+       	var items="";
+       	console.log(list1);
+       	console.log(list2);
+       	if(list1!=""&&list2!=""){
+       		for(var i=0;i<list1.length;i++){
+       			console.log(i);
+       			count=(list1[i]-0)+(list2[i]-0)+(count-0);
+					console.log(FixTwo(eval((list1[i]-0)+(list2[i]-0))));
+					items+="<div class='item'><span>"+eval(i-0+1)+"月</span><span>"+FixTwo(eval((list1[i]-0)+(list2[i]-0)))+"元</span></div>";
+				
+       		}
+       		$(".debj .w").html(items);
+       		return count;
+       	}else if(list1==""){
+       		for(var i=0;i<list2.length;i++){
+       			console.log(i);
+       			count=(list2[i]-0)+(count-0);
+					items+="<div class='item'><span>"+eval(i-0+1)+"月</span><span>"+FixTwo(eval(list2[i]-0))+"元</span></div>";
+				
+       		}
+       		$(".debj .w").html(items);
+       		return count;
+       	}else if(list2==""){
+       		for(var i=0;i<list1.length;i++){
+       			console.log(i);
+       			count=(list1[i]-0)+(count-0);
+					items+="<div class='item'><span>"+eval(i-0+1)+"月</span><span>"+FixTwo(eval(list1[i]-0))+"元</span></div>";
+				
+       		}
+       		$(".debj .w").html(items);
+       		return count;
+       	}
+       }
+		</script>
+	</body>
+</html>

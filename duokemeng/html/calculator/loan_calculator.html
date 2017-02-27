@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>work</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" href="../../css/select.css" />
+		<link rel="stylesheet" href="../../css/aui.css">
+		<style>
+			body{ overflow-x:hidden; }
+		</style>
+	</head>
+	<body>
+		<header class="aui-bar aui-bar-nav">
+	        <a class="aui-pull-left aui-btn">
+	            <span class="aui-iconfont aui-icon-left"></span>
+	        </a>
+	        <div class="aui-title">房贷计算器</div>
+    	</header>
+		<div class="jsq">
+			<div class="container">
+				<form name="jsq">
+					<div class="warpper">
+						<div class="left">
+							<div>
+								贷款类别:
+							</div>
+						</div>
+						<div class="right">
+							<div class="dklb" id="dklb">
+								<select>
+									<option value="1" >公积金贷款</option>
+									<option value="2"  selected >商业贷款</option>
+									<option value="3">组合型贷</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div>
+								计算方式:
+							</div>
+						</div>
+						<div class="right">
+							<div id="jsfs">
+								<div class="sg">
+									<select>
+										<option value="1" selected>根据面积、单价计算</option>
+										<option value="2" >根据贷款总额计算</option>
+									</select>
+								</div>
+								<div class="zh" style="display:none;">
+									商业   公积金
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper zhdk hidden">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:
+								</div>
+								<div class="t2">
+									<input type="text" id="sydk" />
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper zhdk hidden">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									公&nbsp;&nbsp;积&nbsp;&nbsp;金:
+								</div>
+								<div class="t2">
+									<input type="text" id="gjjdk"/>
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper dkze hidden">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									贷款总额:
+								</div>
+								<div class="t2">
+									<input type="text" id="dkze" />
+								</div>
+								<div class="t3">
+									元
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper djmj">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:
+								</div>
+								<div class="t2">
+									<input type="text" id="dj" />
+								</div>
+								<div class="t3">
+									元/m2
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper djmj">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1 ">
+									面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积:
+								</div>
+								<div class="t2">
+									<input type="text"  id="mj"/>
+								</div>
+								<div class="t3">
+									m2
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper djmj">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									按揭成数:
+								</div>
+								<div class="t2 " id="ajcs">
+									<select class="select">
+										<option value="0.2" >2成</option>
+										<option value="0.3" >3成</option>
+										<option value="0.4" >4成</option>
+										<option value="0.5" >5成</option>
+										<option value="0.6" >6成</option>
+										<option value="0.7" selected>7成</option>
+										<option value="0.8" >8成</option>
+										<option value="0.9" >9成</option>
+									</select>
+								</div>
+								<div class="t3"></div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div>
+								按揭年数:
+							</div>
+						</div>
+						<div class="right">
+							<div id="ajns">
+								<select>
+									<option value="1">1年（12期）</option>
+									<option value="2">2年（24期）</option>
+									<option value="3">3年（36期）</option>
+									<option value="4">4年（48期）</option>
+									<option value="5">5年（60期）</option>
+									<option value="6">6年（72期）</option>
+									<option value="7">7年（84期）</option>
+									<option value="8">8年（96期）</option>
+									<option value="9">9年（108期）</option>
+									<option value="10">10年（120期）</option>
+									<option value="11">11年（132期）</option>
+									<option value="12">12年（144期）</option>
+									<option value="13">13年（156期）</option>
+									<option value="14">14年（168期）</option>
+									<option value="15">15年（180期）</option>
+									<option value="16">16年（192期）</option>
+									<option value="17">17年（204期）</option>
+									<option value="18">18年（216期）</option>
+									<option value="19">19年（228期）</option>
+									<option selected value="20">20年（240期）</option>
+									<option value="25">25年（300期）</option>
+									<option value="30">30年（360期）</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="warpper gjj">
+						<div class="left">
+							<div>
+								贷款利率:
+							</div>
+						</div>
+						<div class="right">
+							<div class="lvb">
+								<select>
+									<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
+									<option value="3.4" >15年3月1日利率下限（85折）</option>
+									<option value="2.8" >15年3月1日利率下限（7折）</option>
+									<option value="4" selected>15年3月1日基准利率</option>
+									<option value="4.68" >14年11月22日利率上限（1.1倍）</option>
+									<option value="3.16" >14年11月22日利率下限（85折）</option>
+									<option value="2.97" >14年11月22日利率下限（7折）</option>
+									<option value="4.25" >14年11月22日基准利率</option>
+									<option value="4.5" >12年7月6日利率上限（1.1倍）</option>
+									<option value="4.5" >12年7月6日利率下限（85折）</option>
+									<option value="4.5" >12年7月6日利率下限（7折）</option>
+									<option value="4.5" >12年7月6日基准利率</option>
+									<option value="4.7" >12年6月8日利率上限（1.1倍）</option>
+									<option value="4.7" >12年6月8日利率下限（85折）</option>
+									<option value="4.7" >12年6月8日利率下限（7折）</option>
+									<option value="4.7" >12年6月8日基准利率</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="warpper sy hidden">
+						<div class="left">
+							<div>
+								贷款利率:
+							</div>
+						</div>
+						<div class="right">
+							<div>
+								<select>
+									<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
+									<option value="5.015" >15年3月1日利率下限（85折）</option>
+									<option value="4.13" >15年3月1日利率下限（7折）</option>
+									<option value="5.9" selected>15年3月1日基准利率</option>
+									<option value="6.77" >14年11月22日利率上限（1.1倍）</option>
+									<option value="5.23" >14年11月22日利率下限（85折）</option>
+									<option value="4.31" >14年11月22日利率下限（7折）</option>
+									<option value="6.15" >14年11月22日基准利率</option>
+									<option value="7.21" >12年7月6日利率上限（1.1倍）</option>
+									<option value="5.57" >12年7月6日利率下限（85折）</option>
+									<option value="4.59" >12年7月6日利率下限（7折）</option>
+									<option value="6.55" >12年7月6日基准利率</option>
+									<option value="7.48" >12年6月8日利率上限（1.1倍）</option>
+									<option value="5.78" >12年6月8日利率下限（85折）</option>
+									<option value="4.76" >12年6月8日利率下限（7折）</option>
+									<option value="6.8" >12年6月8日基准利率</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="warpper lv">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1"></div>
+								<div class="t2 m0">
+									<input id="dklv" type="text" value="5.9"/>
+								</div>
+								<div class="t3">
+									%
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper zhlv hidden">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									商&nbsp;&nbsp;&nbsp;&nbsp;业：
+								</div>
+								<div class="t2 m0">
+									<input id="zdklv" type="text" value="5.9"/>
+								</div>
+								<div class="t3">
+									%
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper zhlv hidden">
+						<div class="left">
+							<div></div>
+						</div>
+						<div class="right">
+							<div class="r1">
+								<div class="t1">
+									公积金：
+								</div>
+								<div class="t2 m0">
+									<input id="zdklv1" type="text" value="4"/>
+								</div>
+								<div class="t3">
+									%
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="left">
+							<div>
+								还款方式:
+							</div>
+						</div>
+						<div class="right">
+							<div id="hkfs">
+								<select class="sm">
+									<option value="1" selected>等额本息</option>
+									<option value="2" >等额本金</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="warpper">
+						<div class="bd">
+							<button type="button" class="jsBtn">
+								开始计算
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../../script/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../../script/jquery.select.js"></script>
+		<script type="text/javascript">
+			$("select").selectStyle({
+				"background" : "../../image/loan_calculator/grayBtn.png",
+				"backgroundFocus" : "../../image/loan_calculator/greenBtn.png",
+				"optionBackground" : "#FFFFFF",
+				"optionFocus" : "#d7d7d7",
+				"width" : 543,
+				"height" : 56
+			});
+			$(".jsp .warpper.gjj .right ul li").click(function() {
+				var dd = $("#dklb ul li.focus").attr("name");
+				console.log(dd);
+				if (dd == "1") {
+					$("#dklv").val($(this).attr("name"));
+				} else if (dd == "2") {
+					$("#dklv").val($(".warpper.sy .right ul li").eq($(this).index()).attr("name"));
+				} else if (dd == "3") {
+					$("#zdklv").val($(this).attr("name"));
+					$("#zdklv1").val($(".warpper.sy .right ul li").eq($(this).index()).attr("name"));
+				}
+			});
+			$(".jsq button.jsBtn").click(function() {
+				var loactionF=true;
+				/*判断计算器的输入值**/
+				$("input[type='text']:visible").each(function(i,n){
+					if(!$.isNumeric($(n).val())){
+						alert("输入框的值不能为空，且必须为数字");
+						loactionF=false;
+						return false;
+					}
+				});
+				if(loactionF==false) return;
+				var dklb = $(".jsq #dklb ul li.focus").attr("name");
+				var jsfs = $(".jsq #jsfs ul li.focus").attr("name");
+				var dj = $(".jsq #dj ").val();
+				var mj = $(".jsq #mj ").val();
+				var ajcs = $(".jsq #ajcs  select").val();
+				var ajns = $(".jsq #ajns ul li.focus").attr("name");
+				var dklv = $(".jsq #dklv").val();
+				var hkfs = $(".jsq #hkfs select").val();
+
+				if (hkfs == "1") {
+
+					if ((dklb == "1" || dklb == "2") && jsfs == "1") {
+						var perLV = dklv / 1200;
+						localStorage.perLV=perLV;
+						var FKMoney = eval(dj * mj);
+						localStorage.FKZE = FKMoney;
+						//房款总额
+						var firstPay = eval(FKMoney * (1 - ajcs));
+						//首次支付
+						localStorage.SQFK =FixTwo( firstPay);
+						var DKMoney = eval(FKMoney * ajcs);
+						//贷款总额
+						var MonthMoney = calcAverageCapitalPlusInterest(DKMoney, perLV, eval(ajns * 12));
+						/*月还款*/
+						var totalLX = eval(MonthMoney * ajns * 12 - DKMoney);
+						/**总利息*/
+						var totalHK = eval(totalLX + DKMoney);
+						/*还款总额*/
+					}
+					if ((dklb == "1" || dklb == "2" )&& jsfs == "2") {
+						localStorage.FKZE = "";
+						var perLV = dklv / 1200;
+						localStorage.perLV=perLV;
+						localStorage.jsfs="2";
+						var DKMoney = $("#dkze").val();
+						//贷款总额
+						
+						localStorage.SQFK = "";
+						var MonthMoney = calcAverageCapitalPlusInterest(DKMoney, perLV, eval(ajns * 12));
+						/*月还款*/
+						var totalLX = eval(MonthMoney * ajns * 12 - DKMoney);
+						/**总利息*/
+						var totalHK = eval(totalLX + DKMoney);
+						/*还款总额*/
+					}
+					if(dklb == "3"){
+						
+						var zperLV = $("#zdklv").val() / 1200;
+						var zperLV1 = $("#zdklv1").val() / 1200;
+						localStorage.perLV="";
+						localStorage.FKZE = "";
+						localStorage.SQFK ="";
+						var ZDKMoney = $("#sydk").val();
+						var ZDKMoney1 = $("#gjjdk").val();
+						var DKMoney = eval((ZDKMoney-0)+(ZDKMoney1-0));
+						//贷款总额
+						var MonthMoney1 = calcAverageCapitalPlusInterest(ZDKMoney, zperLV, eval(ajns * 12));
+						var MonthMoney2 = calcAverageCapitalPlusInterest(ZDKMoney1, zperLV1, eval(ajns * 12));
+						var MonthMoney=eval(MonthMoney1+MonthMoney2);
+						/*月还款*/
+						var totalLX1 = eval(MonthMoney1 * ajns * 12 - ZDKMoney);
+						var totalLX2 = eval(MonthMoney2 * ajns * 12 - ZDKMoney1);
+						console.log(totalLX1);
+						console.log(totalLX2);
+						var totalLX = (totalLX1-0) + (totalLX2-0);
+						console.log(totalLX);
+						/**总利息*/
+						var totalHK = eval((totalLX-0) + (DKMoney-0));
+						/*还款总额*/
+					}
+					
+					localStorage.DKZE = FixTwo(DKMoney);
+					localStorage.HKZE = FixTwo(totalHK);
+					localStorage.ZFLX = FixTwo(totalLX);
+					
+					localStorage.DKYS = ajns * 12;
+					localStorage.AJNS = ajns;
+					localStorage.YJHK = FixTwo(MonthMoney);
+					localStorage.flag=1;
+
+				} else if (hkfs == "2") {
+					localStorage.dklb="";
+					localStorage.flag=2;
+					if ((dklb == "1" || dklb == "2") && jsfs == "1") {
+						var perLV = dklv / 1200;
+						localStorage.perLV=perLV;
+						var FKMoney = eval(dj * mj);
+						//房款总额
+						var firstPay = eval(FKMoney * (1 - ajcs));
+						//首次支付
+						var DKMoney = eval(FKMoney * ajcs);
+						//贷款总额
+						
+					}
+					if ((dklb == "1" || dklb == "2" )&& jsfs == "2") {
+						localStorage.FKZE = "";
+						var perLV = dklv / 1200;
+						localStorage.perLV=perLV;
+						var DKMoney = $("#dkze").val();
+						//贷款总额
+						
+						localStorage.SQFK = "";
+						
+					}
+					if(dklb=="3"){
+						localStorage.dklb="3";
+						var zperLV = $("#zdklv").val() / 1200;
+						var zperLV1 = $("#zdklv1").val() / 1200;
+						localStorage.perLV="";
+						localStorage.FKZE = "";
+						localStorage.SQFK ="";
+						var ZDKMoney = $("#sydk").val();
+						var ZDKMoney1 = $("#gjjdk").val();
+						var DKMoney = eval((ZDKMoney-0)+(ZDKMoney1-0));
+						//贷款总额
+						localStorage.zperLV=zperLV;
+						localStorage.zperLV1=zperLV1;
+						localStorage.ZDKMoney=ZDKMoney;
+						localStorage.ZDKMoney1=ZDKMoney1;
+						
+						
+					}
+					
+					localStorage.DKZE =FixTwo(DKMoney);
+					localStorage.HKZE = "";
+					localStorage.ZFLX = "";
+					
+					localStorage.DKYS = ajns * 12;
+					localStorage.AJNS = ajns;
+					localStorage.YJHK = "";
+
+				}
+
+				location.href = "loan_calculator_result.html";
+			});
+
+			function calcAverageCapitalPlusInterest(total, monthlyRate, monthTotal) {
+				var temp = Math.pow((1 + monthlyRate), monthTotal);
+				return (total * monthlyRate * temp) / (temp - 1);
+			}
+       function FixTwo(n){
+       	n=n+"";
+       	if(n.indexOf(".")==-1)
+       	return n;
+       	n=eval((n-0)+0.004);
+       return(Math.round(n*100)/100);
+       }
+		</script>
+	</body>
+</html>

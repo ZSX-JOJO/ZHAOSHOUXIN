@@ -1,0 +1,158 @@
+/**
+ * 	fangdaijisuanqi.html
+ */
+
+body{
+	margin:0;
+	padding:0;
+	font-size:26px;
+	color:#545354;
+	font-family:'Microsoft Yahei',Arial,Helvetica,SimSun, sans-serif;
+}
+.container{
+	width:750px;
+	margin:0 auto;
+}
+.jsq .warpper,.jsqjg .warpper,.sfjsq .warpper,.sfjsqjg .warpper{
+	overflow:hidden;
+	margin-top:30px;
+	z-index: 1;
+}
+.warpper .left{
+	float:left;
+	padding: 10px 20px;
+	line-height:30px;
+	/*min-width: 20%;*/
+	/*margin-left: -2%;*/
+}
+.warpper .right{
+	float:left;
+}
+.warpper.hidden{
+	display:none;
+}
+.warpper .right select{
+width: 100%;
+margin-left: -20%;
+font-size: 20px;
+font-family: "Microsoft Yahei";
+padding: 5px;
+padding-left: 30px;
+outline: none;
+border-radius: 5px;
+background: #f6f6f6;
+border-color: #d7d7d7;
+color: #545354;
+}
+
+.warpper .right .r1 select,.warpper .right select.sm{
+	width: 200px;
+margin-top: 0px;
+padding: 2px;
+}
+.right .r1{
+	overflow:hidden;
+}
+.right .r1 .t2,.right .r1 .t1,.right .r1 .t3{
+	float: left;
+
+}
+.right input{
+	border-radius: 5px;
+background: #f6f6f6;
+color: #545354;
+outline: none;
+text-shadow: none;
+border: 1px solid #d7d7d7;
+height: 43px;
+padding-left: 10px;
+width: 180px;
+font-family: "Microsoft Yahei";
+font-size: 26px;
+}
+.right .r1 .t2{
+	margin-left: 25px;
+margin-right: 20px;
+}
+.right .r1 .t2.m0{
+margin-left: 0px;
+}
+.warpper .bd{
+	text-align:center;
+	margin-top:130px;
+	margin-bottom:35px;
+}
+.warpper .bd.s{
+    margin-top:35px;
+}
+.warpper button{
+	color: #ffffff;
+background: #feb752;
+font-family: "Microsoft Yahei";
+font-size: 26px;
+border: 1px solid #feb752;
+border-radius: 5px;
+padding: 10px 25px;
+}
+/**
+ * 	fangdaijisuanjieguo
+ */
+.right .r1 .t2.t{
+	padding-left: 130px;
+color: #38ad6a;
+width: 122px;
+text-align: right;
+}
+.right .r1 .t2.tt{
+	width:200px;
+	padding-left: 110px;
+}
+.right .r1 .t2.tt .w{
+	font-size: 24px;
+width: 164px;
+padding: 10px;
+border: 1px solid #d7d7d7;
+border-radius: 5px;
+height: 160px;
+overflow:hidden;
+	overflow-y: scroll;
+}
+.right .r1 .t2.tt .w .item {
+padding-bottom:10px;
+}
+.right .r1 .t2.tt .w .item span:first-child{
+	display:block;
+	float:left;
+}
+ .warpper.s{
+	padding-bottom: 40px;
+	border-bottom:1px dashed #eeeeee;
+}
+.right .r1 .t1.e{
+	font-size: 20px;
+color: #adadad;
+}
+.right .r1 .t1.e span{
+	color: #ee6e6b;
+padding-right: 10px;
+}
+/***
+ *sfjsq 
+ */
+.sfjsq .warpper .right select{
+    width:300px;
+}
+.sfjsq .warpper .left{
+    min-width:270px;
+    text-align:right;
+}
+.sfjsq .right input{
+    width:290px;
+}
+/**
+ *     sfjsqjg
+ */
+.sfjsqjg .t1{
+      min-width: 111px;
+      text-align:right;
+}
