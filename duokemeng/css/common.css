@@ -5,25 +5,24 @@
 body{
 	margin:0;
 	padding:0;
-	font-size:26px;
+	font-size:20px;
 	color:#545354;
 	font-family:'Microsoft Yahei',Arial,Helvetica,SimSun, sans-serif;
 }
 .container{
-	width:750px;
+	width:100%;
 	margin:0 auto;
 }
 .jsq .warpper,.jsqjg .warpper,.sfjsq .warpper,.sfjsqjg .warpper{
 	overflow:hidden;
-	margin-top:30px;
+	margin-top:0px;
 	z-index: 1;
 }
 .warpper .left{
 	float:left;
 	padding: 10px 20px;
 	line-height:30px;
-	/*min-width: 20%;*/
-	/*margin-left: -2%;*/
+	min-width: 110px;
 }
 .warpper .right{
 	float:left;
@@ -32,8 +31,7 @@ body{
 	display:none;
 }
 .warpper .right select{
-width: 100%;
-margin-left: -20%;
+	width: 580px;
 font-size: 20px;
 font-family: "Microsoft Yahei";
 padding: 5px;
@@ -47,18 +45,21 @@ color: #545354;
 
 .warpper .right .r1 select,.warpper .right select.sm{
 	width: 200px;
-margin-top: 0px;
+margin-top: -10px;
 padding: 2px;
 }
 .right .r1{
 	overflow:hidden;
+	padding: 0px,0px;
+	margin-top: -1rem;
 }
 .right .r1 .t2,.right .r1 .t1,.right .r1 .t3{
 	float: left;
+	margin-left: 20px;
 
 }
 .right input{
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 background: #f6f6f6;
 color: #545354;
 outline: none;
@@ -92,7 +93,7 @@ font-family: "Microsoft Yahei";
 font-size: 26px;
 border: 1px solid #feb752;
 border-radius: 5px;
-padding: 10px 25px;
+padding: 0px 25px;
 }
 /**
  * 	fangdaijisuanjieguo

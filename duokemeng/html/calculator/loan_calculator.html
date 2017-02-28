@@ -15,7 +15,8 @@
 	<body>
 		<header class="aui-bar aui-bar-nav">
 	        <a class="aui-pull-left aui-btn">
-	            <span class="aui-iconfont aui-icon-left"></span>
+            <span class="aui-iconfont aui-icon-left" onclick="javascript :history.back(-1);">
+            </span>
 	        </a>
 	        <div class="aui-title">房贷计算器</div>
     	</header>
@@ -159,12 +160,12 @@
 								</div>
 								<div class="t2 " id="ajcs">
 									<select class="select">
-										<option value="0.2" >2成</option>
+										<option value="0.2" selected="">2成</option>
 										<option value="0.3" >3成</option>
 										<option value="0.4" >4成</option>
 										<option value="0.5" >5成</option>
 										<option value="0.6" >6成</option>
-										<option value="0.7" selected>7成</option>
+										<option value="0.7" >7成</option>
 										<option value="0.8" >8成</option>
 										<option value="0.9" >9成</option>
 									</select>

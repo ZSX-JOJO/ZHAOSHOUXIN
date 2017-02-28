@@ -7,6 +7,22 @@
     	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<link rel="stylesheet" href="../../css/select.css" />
 		<link rel="stylesheet" href="../../css/aui.css">
+		<link rel="stylesheet" href="../../csscommon.css">
+		<style>
+			.jsq.warpper{
+				overflow: hidden;
+			}
+			.warpper button{
+				color: #ffffff;
+				background: #feb752;
+				font-family: "Microsoft Yahei";
+				font-size: 20px;
+				border: 1px solid #feb752;
+				border-radius: 5px;
+				padding: 0px 25px;
+				margin-left: 30%;
+			}
+		</style>
 </head>
 <body>
     <header class="aui-bar aui-bar-nav">
@@ -16,7 +32,7 @@
     </header>
     <section class="aui-content aui-margin-t-15 jsq">
     	<ul class="aui-list aui-form-list aui-margin-b-15 aui-list-in jsq">
-    		<li class="aui-list-item warpper">
+    		<li class="aui-list-item warpper"><!--此处为 贷款类型选择 选择组合型贷 弹出商业 公积金-->
     			<div class="aui-list-item-inner">
     				<div>贷款类别</div>
     				<div>
@@ -32,7 +48,7 @@
                     </div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper">
+    		<li class="aui-list-item warpper"><!--此处为 计算方式选择-->
     			<div class="aui-list-item-inner">
     				<div>计算方式</div>
     				<div class="right">
@@ -41,229 +57,203 @@
 									<option value="1" selected>根据面积、单价计算</option>
 									<option value="2" >根据贷款总额计算</option>
 							</select>
-							<div style="display: none;">商业公积金</div>
+							<div style="display: none;">商业 公积金</div>
     					</div>
     				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper">
-    			<div class="aui-list-item-inner">
-	    			<div class="right">
-	    				<div>单价</div>
-	    				<div>
+    		<li class="aui-list-item warpper hidden"><!--贷款类型 选择 组合型贷 弹出此-->
+    			<div class="aui-list-item-inner right">
+	    				<div class="aui-list-item-label">商业:</div>
+	    				<div class="aui-list-item-input">
 	    					<input type="text" id="sydk">
 	    				</div>
-	    				<div>元</div>
-	    			</div>
-    			</div>
-    		</li>
-    		<li class="aui-list-item warpper">
-    			<div class="aui-list-item-inner">
-	    			<div class="right">
-	    				<div>公&nbsp;&nbsp;积&nbsp;&nbsp;金:</div>
-	    				<div>
-	    					<input type="text" id="gjjdk">
+	    				<div class="aui-list-item-label-icon">
+	    					<!-- <i class="aui-iconfont aui-icon-down"></i> -->
+	    					<img src="../../image/calculator/yuan.png" style="max-width: 1.5rem">
 	    				</div>
-	    				<div>元</div>
-	    			</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper">
-    			<div class="aui-list-item-inner">
-	    			<div class="right">
-	    				<div>贷款总额</div>
-	    				<div>
-	    					<input type="text" id="dkze">
-	    				</div>
-	    				<div>元</div>
-	    			</div>
+    		<li class="aui-list-item warpper"><!--贷款类型 选择 组合型贷 弹出此-->
+    			<div class="aui-list-item-inner right">
+    				<div class="aui-list-item-label">公积金：</div>
+    				<div class="aui-list-item-input">
+    					<input type="text" id="gjjdk">
+    				</div>
+    				<div class="aui-list-item-label-icon">
+    					<img src="../../image/calculator/yuan.png" style="max-width: 1.5rem">
+    				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper">
-    			<div class="right">
-    				<div>单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:</div>
-    				<div>
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据总额计算 弹出此-->
+    			<div class="aui-list-item-inner right">
+	    			<div class="aui-list-item-label">贷款总额:</div>
+    				<div class="aui-list-item-input">
+    					<input type="text" id="dkze">
+    				</div>
+    				<div class="aui-list-item-label-icon">
+    					<img src="../../image/calculator/yuan.png" style="max-width: 1.5rem">
+    				</div>
+    			</div>
+    		</li>
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据面积 单价计算 弹出此-->
+    			<div class="aui-list-item-inner right">
+    				<div class="aui-list-item-label">每平米价格:</div><!--dj 单价-->
+    				<div class="aui-list-item-input">
     					<input type="text" id="dj">
     				</div>
-    				<div>元/m2</div>
+    				<div class="aui-list-item-label-icon">
+    					<img src="../../image/calculator/yuan.png" style="max-width: 1.5rem">
+    				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper djmj">
-    			<div class="aui-list-item-inner">
-	    			<div class="right">
-	    				<div>面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积:</div>
-	    				<div>
-	    					<input type="text" id="mj">
-	    				</div>
-	    				<div>m2</div>
-	    			</div>
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据面积 单价计算 弹出此-->
+    			<div class="aui-list-item-inner right">
+    				<div class="aui-list-item-label">面积:</div><!--mj 面积-->
+    				<div class="aui-list-item-input">
+    					<input type="text" id="mj">
+    				</div>
+    				<div class="aui-list-item-label-icon">
+    					<img src="../../image/calculator/area.png" style="max-width: 1.5rem">
+    				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper djmj">
-    			<div class="aui-list-item-inner">
-	    			<div class="right">
-	    				<div>
-	    					<div>按揭成数:</div>
-	    					<div id="ajcs">
-	    						<select name="" id="">
-	    							<option value="0.2" >2成</option>
-									<option value="0.3" >3成</option>
-									<option value="0.4" >4成</option>
-									<option value="0.5" >5成</option>
-									<option value="0.6" >6成</option>
-									<option value="0.7" selected>7成</option>
-									<option value="0.8" >8成</option>
-									<option value="0.9" >9成</option>
-	    						</select>
-	    					</div>
-	    				</div>
-	    			</div>
+    		<li class="aui-list-item warpper djmj"><!--有且仅有 计算方式 根据面积 单价计算 才弹出此-->
+    			<div class="aui-list-item-inner right">
+					<div>按揭成数:</div>
+					<div id="ajcs">
+						<select name="" id="">
+							<option value="0.2" >2成</option>
+							<option value="0.3" >3成</option>
+							<option value="0.4" >4成</option>
+							<option value="0.5" >5成</option>
+							<option value="0.6" >6成</option>
+							<option value="0.7" selected>7成</option>
+							<option value="0.8" >8成</option>
+							<option value="0.9" >9成</option>
+						</select>
+					</div>
     			</div>
     		</li>
-    		<li class="aui-lsit-item">
+    		<li class="aui-list-item warpper"><!--选择 按揭年数-->
     			<div class="aui-list-item-inner">
 	    			<div>按揭年数</div>
-	    			<div class="right">
-						<div id="ajns">
-							<select>
-								<option value="1">1年（12期）</option>
-								<option value="2">2年（24期）</option>
-								<option value="3">3年（36期）</option>
-								<option value="4">4年（48期）</option>
-								<option value="5">5年（60期）</option>
-								<option value="6">6年（72期）</option>
-								<option value="7">7年（84期）</option>
-								<option value="8">8年（96期）</option>
-								<option value="9">9年（108期）</option>
-								<option value="10">10年（120期）</option>
-								<option value="11">11年（132期）</option>
-								<option value="12">12年（144期）</option>
-								<option value="13">13年（156期）</option>
-								<option value="14">14年（168期）</option>
-								<option value="15">15年（180期）</option>
-								<option value="16">16年（192期）</option>
-								<option value="17">17年（204期）</option>
-								<option value="18">18年（216期）</option>
-								<option value="19">19年（228期）</option>
-								<option selected value="20">20年（240期）</option>
-								<option value="25">25年（300期）</option>
-								<option value="30">30年（360期）</option>
-							</select>
-						</div>
+	    			<div class="right" id="ajns"><!--anjs 按揭年数-->
+						<select>
+							<option value="1">1年（12期）</option>
+							<option value="2">2年（24期）</option>
+							<option value="3">3年（36期）</option>
+							<option value="4">4年（48期）</option>
+							<option value="5">5年（60期）</option>
+							<option value="6">6年（72期）</option>
+							<option value="7">7年（84期）</option>
+							<option value="8">8年（96期）</option>
+							<option value="9">9年（108期）</option>
+							<option value="10">10年（120期）</option>
+							<option value="11">11年（132期）</option>
+							<option value="12">12年（144期）</option>
+							<option value="13">13年（156期）</option>
+							<option value="14">14年（168期）</option>
+							<option value="15">15年（180期）</option>
+							<option value="16">16年（192期）</option>
+							<option value="17">17年（204期）</option>
+							<option value="18">18年（216期）</option>
+							<option value="19">19年（228期）</option>
+							<option selected value="20">20年（240期）</option>
+							<option value="25">25年（300期）</option>
+							<option value="30">30年（360期）</option>
+						</select>
 					</div>
 				</div>
     		</li>
-    		<li class="warpper gjj">
+    		<li class="aui-list-item warpper gjj"><!--选择 贷款利率--><!--gjj 公积金贷款-->
     			<div class="aui-list-item-inner">
-					<div class="left">
-						<div>
-							贷款利率:
-						</div>
+					<div>
+						贷款利率:
 					</div>
 					<div class="right">
-						<div class="lvb">
-							<select>
-								<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
-								<option value="3.4" >15年3月1日利率下限（85折）</option>
-								<option value="2.8" >15年3月1日利率下限（7折）</option>
-								<option value="4" selected>15年3月1日基准利率</option>
-								<option value="4.68" >14年11月22日利率上限（1.1倍）</option>
-								<option value="3.16" >14年11月22日利率下限（85折）</option>
-								<option value="2.97" >14年11月22日利率下限（7折）</option>
-								<option value="4.25" >14年11月22日基准利率</option>
-								<option value="4.5" >12年7月6日利率上限（1.1倍）</option>
-								<option value="4.5" >12年7月6日利率下限（85折）</option>
-								<option value="4.5" >12年7月6日利率下限（7折）</option>
-								<option value="4.5" >12年7月6日基准利率</option>
-								<option value="4.7" >12年6月8日利率上限（1.1倍）</option>
-								<option value="4.7" >12年6月8日利率下限（85折）</option>
-								<option value="4.7" >12年6月8日利率下限（7折）</option>
-								<option value="4.7" >12年6月8日基准利率</option>
-							</select>
-						</div>
+						<select>
+							<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
+							<option value="3.4" >15年3月1日利率下限（85折）</option>
+							<option value="2.8" >15年3月1日利率下限（7折）</option>
+							<option value="4" selected>15年3月1日基准利率</option>
+							<option value="4.68" >14年11月22日利率上限（1.1倍）</option>
+							<option value="3.16" >14年11月22日利率下限（85折）</option>
+							<option value="2.97" >14年11月22日利率下限（7折）</option>
+							<option value="4.25" >14年11月22日基准利率</option>
+							<option value="4.5" >12年7月6日利率上限（1.1倍）</option>
+							<option value="4.5" >12年7月6日利率下限（85折）</option>
+							<option value="4.5" >12年7月6日利率下限（7折）</option>
+							<option value="4.5" >12年7月6日基准利率</option>
+							<option value="4.7" >12年6月8日利率上限（1.1倍）</option>
+							<option value="4.7" >12年6月8日利率下限（85折）</option>
+							<option value="4.7" >12年6月8日利率下限（7折）</option>
+							<option value="4.7" >12年6月8日基准利率</option>
+						</select>
 					</div>
 				</div>
 			</li>
-			<li class="warpper sy hidden">
+			<li class="aui-list-item warpper sy hidden"><!--选择 贷款利率--><!--sy 商业贷款-->
 				<div class="aui-list-item-inner">
-					<div class="left">
-						<div>
-							贷款利率:
-						</div>
+					<div>
+						贷款利率:
 					</div>
 					<div class="right">
-						<div>
-							<select>
-								<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
-								<option value="5.015" >15年3月1日利率下限（85折）</option>
-								<option value="4.13" >15年3月1日利率下限（7折）</option>
-								<option value="5.9" selected>15年3月1日基准利率</option>
-								<option value="6.77" >14年11月22日利率上限（1.1倍）</option>
-								<option value="5.23" >14年11月22日利率下限（85折）</option>
-								<option value="4.31" >14年11月22日利率下限（7折）</option>
-								<option value="6.15" >14年11月22日基准利率</option>
-								<option value="7.21" >12年7月6日利率上限（1.1倍）</option>
-								<option value="5.57" >12年7月6日利率下限（85折）</option>
-								<option value="4.59" >12年7月6日利率下限（7折）</option>
-								<option value="6.55" >12年7月6日基准利率</option>
-								<option value="7.48" >12年6月8日利率上限（1.1倍）</option>
-								<option value="5.78" >12年6月8日利率下限（85折）</option>
-								<option value="4.76" >12年6月8日利率下限（7折）</option>
-								<option value="6.8" >12年6月8日基准利率</option>
-							</select>
-						</div>
+						<select>
+							<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
+							<option value="5.015" >15年3月1日利率下限（85折）</option>
+							<option value="4.13" >15年3月1日利率下限（7折）</option>
+							<option value="5.9" selected>15年3月1日基准利率</option>
+							<option value="6.77" >14年11月22日利率上限（1.1倍）</option>
+							<option value="5.23" >14年11月22日利率下限（85折）</option>
+							<option value="4.31" >14年11月22日利率下限（7折）</option>
+							<option value="6.15" >14年11月22日基准利率</option>
+							<option value="7.21" >12年7月6日利率上限（1.1倍）</option>
+							<option value="5.57" >12年7月6日利率下限（85折）</option>
+							<option value="4.59" >12年7月6日利率下限（7折）</option>
+							<option value="6.55" >12年7月6日基准利率</option>
+							<option value="7.48" >12年6月8日利率上限（1.1倍）</option>
+							<option value="5.78" >12年6月8日利率下限（85折）</option>
+							<option value="4.76" >12年6月8日利率下限（7折）</option>
+							<option value="6.8" >12年6月8日基准利率</option>
+						</select>
 					</div>
 				</div>
 			</li>
-			<div class="warpper lv">
-				<div class="left">
-				</div>
-				<div class="right">
-					<div class="r1">
-						<div class="t2 m0">
-							<input id="dklv" type="text" value="5.9"/>
-						</div>
-						<div class="t3">
-							%
-						</div>
+			<div class="aui-list-item warpper lv"><!--贷款利率 %--><!--lv %-->
+				<div class="aui-list-item-inner right">
+					<div class="aui-list-item-label"></div>
+					<div class="aui-list-item-input">
+						<input type="text" id="dklv" value="5.9">
+					</div>
+					<div class="aui-list-item-label-icon">
+						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
 					</div>
 				</div>
 			</div>
-			<div class="warpper zhlv hidden">
-				<div class="left">
-				</div>
-				<div class="right">
-					<div class="r1">
-						<div class="t1">
-							商&nbsp;&nbsp;&nbsp;&nbsp;业：
-						</div>
-						<div class="t2 m0">
-							<input id="zdklv" type="text" value="5.9"/>
-						</div>
-						<div class="t3">
-							%
-						</div>
+			<div class="aui-list-item warpper zhlv hidden"><!--贷款类别为 组合型贷时出现 此%--><!--zhlv 组合-->
+				<div class="aui-list-item-inner right">
+					<div class="aui-list-item-label">商业:</div>
+					<div class="aui-list-item-input">
+						<input type="text" id="zdklv" value="5.9">
+					</div>
+					<div class="aui-list-item-label-icon">
+						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
 					</div>
 				</div>
 			</div>
-			<div class="warpper zhlv hidden">
-				<div class="left">
-				</div>
-				<div class="right">
-					<div class="r1">
-						<div class="t1">
-							公积金：
-						</div>
-						<div class="t2 m0">
-							<input id="zdklv1" type="text" value="4"/>
-						</div>
-						<div class="t3">
-							%
-						</div>
+			<div class="aui-list-item warpper zhlv hidden"><!--贷款类型为 组合型贷时出现 此%--><!--zhlv 组合-->
+				<div class="aui-list-item-inner right">
+					<div class="aui-list-item-label">公积金:</div>
+					<div class="aui-list-item-input">
+						<input type="text" id="zdklv1" value="4">
+					</div>
+					<div class="aui-list-item-label-icon">
+						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
 					</div>
 				</div>
 			</div>
-			<div class="aui-list-item warpper">
+			<div class="aui-list-item warpper"><!--两种换款方式-->
 				<div class="aui-list-item-inner">
 					<div class="left">
 						<div>
@@ -290,6 +280,8 @@
     	</ul>
     </section>
 </body>
+<script type="text/javascript" src="_assert/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="_assert/js/jquery.select.js"></script>
 <script type="text/javascript">
 			$("select").selectStyle({
 				"background" : "../../image/loan_calculator/grayBtn.png",
