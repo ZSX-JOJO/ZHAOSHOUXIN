@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>light</title>
+</head>
+<body>
+	<img id="sister" onclick="change_image()" src="img/on.png" >
+<!--  -->
+	<p id="changecolor">改变颜色</p>
+	<button type="button" onclick="color()">点击一下</button><br>
+<!--  -->
+	<input type="text" id="demo">
+	<button type="button" onclick="sss()">确认</button>
+	<!--  -->
+	<p>asdadadsasdasdasd</p>
+	<!--  -->
+	<p id="inner">阿斯达所多</p>
+	<button type="button" onclick="tianjia()">添加</button>
+</body>
+<script>
+	/**/
+	function change_image(){
+		element=document.getElemenById('sister')
+		if (element.src.match("on")) {
+			element.src="img/off.png";
+		} else {
+			element.src='img/on.png';
+		}
+	}
+	/*改变HTML样式*/
+	function color(){
+		e =document.getElementById("changecolor")
+		e.style.color="red";
+	}
+	/*验证输入*/
+	function sss(){
+		var x=document.getElementById("demo").value;
+			if(x==""||isNaN(x))
+				{
+				alert("只支持数字！！");
+				}
+	}
+	/**/
+	document.write("<h1>赵赵赵赵赵赵</h1>")
+	/**/
+	function tianjia(){
+		document.getElementById("inner").innerHTML="阿斯达所多:改变为操你妹！";
+	}
+	/**/
+
+</script>
+</html>

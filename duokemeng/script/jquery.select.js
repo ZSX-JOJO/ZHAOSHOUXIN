@@ -48,7 +48,7 @@
             }
            
             $parent.find(".select").bind("click", function() {
-                   $(this).css("background-image","url('_assert/img/greenBtn.png')");
+                   $(this).css("background-image","url('../image/calculator/greenBtn.png')");
                    $(this).addClass("open");
                     //$(this).next().css("z-index", 999);
                     console.log($(this).offset().top);
@@ -106,7 +106,7 @@
 						$("#zdklv1").val($(".warpper.sy .right ul li").eq($(this).index()).attr("name"));
 							}
                 }
-                 $(this).parent().prev().css("background-image","url('_assert/img/grayBtn.png')");
+                 $(this).parent().prev().css("background-image","url('../image/calculator/grayBtn.png')");
                 $(this).parent().prev().text($(this).text());
                 $(this).parent().hide();
                 $(this).parent().css("z-index", 1);

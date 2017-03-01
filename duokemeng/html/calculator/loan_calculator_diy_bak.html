@@ -1,13 +1,28 @@
 <!doctype html>
 <html>
 <head>
-    <title>房贷计算器</title>
+    <title>work</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<link rel="stylesheet" href="../../css/select.css" />
 		<link rel="stylesheet" href="../../css/aui.css">
 		<link rel="stylesheet" href="../../csscommon.css">
+		<style>
+			.jsq.warpper{
+				overflow: hidden;
+			}
+			.warpper button{
+				color: #ffffff;
+				background: #feb752;
+				font-family: "Microsoft Yahei";
+				font-size: 20px;
+				border: 1px solid #feb752;
+				border-radius: 5px;
+				padding: 0px 25px;
+				margin-left: 30%;
+			}
+		</style>
 </head>
 <body>
     <header class="aui-bar aui-bar-nav">
@@ -22,7 +37,7 @@
     		<li class="aui-list-item warpper"><!--此处为 贷款类型选择 选择组合型贷 弹出商业 公积金-->
     			<div class="aui-list-item-inner">
     				<div>贷款类别</div>
-                        <div id="dklb">
+                        <div  id="dklb">
                     		<select>
 								<option value="1" >公积金贷款</option>
 								<option value="2"  selected >商业贷款</option>
@@ -44,8 +59,8 @@
 					</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper zhdk hidden"><!--贷款类型 选择 组合型贷 弹出此-->
-    			<div class="aui-list-item-inner ">
+    		<li class="aui-list-item warpper hidden"><!--贷款类型 选择 组合型贷 弹出此-->
+    			<div class="aui-list-item-inner right">
     				<div class="aui-list-item-label">商业:</div>
     				<div class="aui-list-item-input">
     					<input type="text" id="sydk">
@@ -56,7 +71,7 @@
     				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper zhdk hidden"><!--贷款类型 选择 组合型贷 弹出此-->
+    		<li class="aui-list-item warpper"><!--贷款类型 选择 组合型贷 弹出此-->
     			<div class="aui-list-item-inner">
     				<div class="aui-list-item-label">公积金：</div>
     				<div class="aui-list-item-input">
@@ -67,7 +82,7 @@
     				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper dkze hidden"><!--计算方式 选择 根据总额计算 弹出此-->
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据总额计算 弹出此-->
     			<div class="aui-list-item-inner">
 	    			<div class="aui-list-item-label">贷款总额:</div>
     				<div class="aui-list-item-input">
@@ -78,9 +93,9 @@
     				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper djmj"><!--计算方式 选择 根据面积 单价计算 弹出此-->
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据面积 单价计算 弹出此-->
     			<div class="aui-list-item-inner">
-    				<div class="aui-list-item-label">每平米价格:</div><!--dj 单价 djmj 单价面积-->
+    				<div class="aui-list-item-label">每平米价格:</div><!--dj 单价-->
     				<div class="aui-list-item-input">
     					<input type="text" id="dj">
     				</div>
@@ -89,7 +104,7 @@
     				</div>
     			</div>
     		</li>
-    		<li class="aui-list-item warpper djmj"><!--计算方式 选择 根据面积 单价计算 弹出此-->
+    		<li class="aui-list-item warpper"><!--计算方式 选择 根据面积 单价计算 弹出此-->
     			<div class="aui-list-item-inner">
     				<div class="aui-list-item-label">面积:</div><!--mj 面积-->
     				<div class="aui-list-item-input">
@@ -104,7 +119,7 @@
     			<div class="aui-list-item-inner">
 					<div>按揭成数:</div>
 					<div id="ajcs">
-						<select>
+						<select name="" id="">
 							<option value="0.2" >2成</option>
 							<option value="0.3" >3成</option>
 							<option value="0.4" >4成</option>
@@ -120,7 +135,7 @@
     		<li class="aui-list-item warpper"><!--选择 按揭年数-->
     			<div class="aui-list-item-inner">
 	    			<div>按揭年数</div>
-	    			<div class="" id="ajns"><!--anjs 按揭年数-->
+	    			<div class="right" id="ajns"><!--anjs 按揭年数-->
 						<select>
 							<option value="1">1年（12期）</option>
 							<option value="2">2年（24期）</option>
@@ -153,7 +168,7 @@
 					<div>
 						贷款利率:
 					</div>
-					<div>
+					<div class="right">
 						<select>
 							<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
 							<option value="3.4" >15年3月1日利率下限（85折）</option>
@@ -180,7 +195,7 @@
 					<div>
 						贷款利率:
 					</div>
-					<div>
+					<div class="right">
 						<select>
 							<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
 							<option value="5.015" >15年3月1日利率下限（85折）</option>
@@ -202,8 +217,19 @@
 					</div>
 				</div>
 			</li>
-			<li class="aui-list-item warpper zhlv hidden"><!--贷款类别为 组合型贷时出现 此%--><!--zhlv 组合-->
-				<div class="aui-list-item-inner ">
+			<div class="aui-list-item warpper lv"><!--贷款利率 %--><!--lv %-->
+				<div class="aui-list-item-inner right">
+					<div class="aui-list-item-label"></div>
+					<div class="aui-list-item-input">
+						<input type="text" id="dklv" value="5.9">
+					</div>
+					<div class="aui-list-item-label-icon">
+						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
+					</div>
+				</div>
+			</div>
+			<div class="aui-list-item warpper zhlv hidden"><!--贷款类别为 组合型贷时出现 此%--><!--zhlv 组合-->
+				<div class="aui-list-item-inner right">
 					<div class="aui-list-item-label">商业:</div>
 					<div class="aui-list-item-input">
 						<input type="text" id="zdklv" value="5.9">
@@ -212,9 +238,9 @@
 						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
 					</div>
 				</div>
-			</li>
-			<li class="aui-list-item warpper zhlv hidden"><!--贷款类型为 组合型贷时出现 此%--><!--zhlv 组合-->
-				<div class="aui-list-item-inner ">
+			</div>
+			<div class="aui-list-item warpper zhlv hidden"><!--贷款类型为 组合型贷时出现 此%--><!--zhlv 组合-->
+				<div class="aui-list-item-inner right">
 					<div class="aui-list-item-label">公积金:</div>
 					<div class="aui-list-item-input">
 						<input type="text" id="zdklv1" value="4">
@@ -223,8 +249,8 @@
 						<img src="../../image/calculator/cent.png" style="max-width: 1.5rem">
 					</div>
 				</div>
-			</li>
-			<li class="aui-list-item warpper"><!--两种换款方式-->
+			</div>
+			<div class="aui-list-item warpper"><!--两种换款方式-->
 				<div class="aui-list-item-inner">
 					<div class="left">
 						<div>
@@ -240,11 +266,13 @@
 						</div>
 					</div>
 				</div>
-			</li>
-			<div class="warpper aui-content-padded"">
-				<button class="aui-btn aui-btn-block aui-btn-success aui-btn-sm jsBtn"" type="button">
+			</div>
+			<div class="warpper">
+				<div class="bd">
+					<button type="button" class="jsBtn">
 						开始计算
-				</button>
+					</button>
+				</div>
 			</div>
     	</ul>
     </section>

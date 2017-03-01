@@ -24,328 +24,251 @@
 			<div class="container">
 				<form name="jsq">
 					<div class="warpper">
-						<div class="left">
-							<div>
-								贷款类别:
-							</div>
+						<div>
+							贷款类别:
 						</div>
-						<div class="right">
-							<div class="dklb" id="dklb">
-								<select>
-									<option value="1" >公积金贷款</option>
-									<option value="2"  selected >商业贷款</option>
-									<option value="3">组合型贷</option>
-								</select>
-							</div>
+						<div class="dklb" id="dklb">
+							<select>
+								<option value="1" >公积金贷款</option>
+								<option value="2"  selected >商业贷款</option>
+								<option value="3">组合型贷</option>
+							</select>
 						</div>
 					</div>
 					<div class="warpper">
-						<div class="left">
-							<div>
-								计算方式:
-							</div>
+						<div>
+							计算方式:
 						</div>
-						<div class="right">
-							<div id="jsfs">
-								<div class="sg">
-									<select>
-										<option value="1" selected>根据面积、单价计算</option>
-										<option value="2" >根据贷款总额计算</option>
-									</select>
-								</div>
-								<div class="zh" style="display:none;">
-									商业   公积金
-								</div>
+						<div id="jsfs">
+							<select>
+								<option value="1" selected>根据面积、单价计算</option>
+								<option value="2" >根据贷款总额计算</option>
+							</select>
+							<div class="zh" style="display:none;">
+								商业   公积金
 							</div>
 						</div>
 					</div>
 					<div class="warpper zhdk hidden">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:
-								</div>
-								<div class="t2">
-									<input type="text" id="sydk" />
-								</div>
-								<div class="t3">
-									元
-								</div>
+						<div class="r1">
+							<div class="t1">
+								商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:
+							</div>
+							<div class="t2">
+								<input type="text" id="sydk" />
+							</div>
+							<div class="t3">
+								元
 							</div>
 						</div>
 					</div>
 					<div class="warpper zhdk hidden">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									公&nbsp;&nbsp;积&nbsp;&nbsp;金:
-								</div>
-								<div class="t2">
-									<input type="text" id="gjjdk"/>
-								</div>
-								<div class="t3">
-									元
-								</div>
+						<div class="r1">
+							<div class="t1">
+								公&nbsp;&nbsp;积&nbsp;&nbsp;金:
+							</div>
+							<div class="t2">
+								<input type="text" id="gjjdk"/>
+							</div>
+							<div class="t3">
+								元
 							</div>
 						</div>
 					</div>
 					<div class="warpper dkze hidden">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									贷款总额:
-								</div>
-								<div class="t2">
-									<input type="text" id="dkze" />
-								</div>
-								<div class="t3">
-									元
-								</div>
+						<div class="r1">
+							<div class="t1">
+								贷款总额:
+							</div>
+							<div class="t2">
+								<input type="text" id="dkze" />
+							</div>
+							<div class="t3">
+								元
 							</div>
 						</div>
 					</div>
 					<div class="warpper djmj">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:
-								</div>
-								<div class="t2">
-									<input type="text" id="dj" />
-								</div>
-								<div class="t3">
-									元/m2
-								</div>
+						<div class="r1">
+							<div class="t1">
+								单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:
+							</div>
+							<div class="t2">
+								<input type="text" id="dj" />
+							</div>
+							<div class="t3">
+								元/m2
 							</div>
 						</div>
 					</div>
 					<div class="warpper djmj">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1 ">
-									面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积:
-								</div>
-								<div class="t2">
-									<input type="text"  id="mj"/>
-								</div>
-								<div class="t3">
-									m2
-								</div>
+						<div class="r1">
+							<div class="t1 ">
+								面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积:
+							</div>
+							<div class="t2">
+								<input type="text"  id="mj"/>
+							</div>
+							<div class="t3">
+								m2
 							</div>
 						</div>
 					</div>
 					<div class="warpper djmj">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									按揭成数:
-								</div>
-								<div class="t2 " id="ajcs">
-									<select class="select">
-										<option value="0.2" selected="">2成</option>
-										<option value="0.3" >3成</option>
-										<option value="0.4" >4成</option>
-										<option value="0.5" >5成</option>
-										<option value="0.6" >6成</option>
-										<option value="0.7" >7成</option>
-										<option value="0.8" >8成</option>
-										<option value="0.9" >9成</option>
-									</select>
-								</div>
-								<div class="t3"></div>
+						<div class="r1">
+							<div class="t1">
+								按揭成数:
 							</div>
+							<div class="t2 " id="ajcs">
+								<select class="select">
+									<option value="0.2" selected="">2成</option>
+									<option value="0.3" >3成</option>
+									<option value="0.4" >4成</option>
+									<option value="0.5" >5成</option>
+									<option value="0.6" >6成</option>
+									<option value="0.7" >7成</option>
+									<option value="0.8" >8成</option>
+									<option value="0.9" >9成</option>
+								</select>
+							</div>
+							<div class="t3"></div>
 						</div>
 					</div>
 					<div class="warpper">
-						<div class="left">
-							<div>
-								按揭年数:
-							</div>
+						<div>
+							按揭年数:
 						</div>
-						<div class="right">
-							<div id="ajns">
-								<select>
-									<option value="1">1年（12期）</option>
-									<option value="2">2年（24期）</option>
-									<option value="3">3年（36期）</option>
-									<option value="4">4年（48期）</option>
-									<option value="5">5年（60期）</option>
-									<option value="6">6年（72期）</option>
-									<option value="7">7年（84期）</option>
-									<option value="8">8年（96期）</option>
-									<option value="9">9年（108期）</option>
-									<option value="10">10年（120期）</option>
-									<option value="11">11年（132期）</option>
-									<option value="12">12年（144期）</option>
-									<option value="13">13年（156期）</option>
-									<option value="14">14年（168期）</option>
-									<option value="15">15年（180期）</option>
-									<option value="16">16年（192期）</option>
-									<option value="17">17年（204期）</option>
-									<option value="18">18年（216期）</option>
-									<option value="19">19年（228期）</option>
-									<option selected value="20">20年（240期）</option>
-									<option value="25">25年（300期）</option>
-									<option value="30">30年（360期）</option>
-								</select>
-							</div>
+						<div id="ajns">
+							<select>
+								<option value="1">1年（12期）</option>
+								<option value="2">2年（24期）</option>
+								<option value="3">3年（36期）</option>
+								<option value="4">4年（48期）</option>
+								<option value="5">5年（60期）</option>
+								<option value="6">6年（72期）</option>
+								<option value="7">7年（84期）</option>
+								<option value="8">8年（96期）</option>
+								<option value="9">9年（108期）</option>
+								<option value="10">10年（120期）</option>
+								<option value="11">11年（132期）</option>
+								<option value="12">12年（144期）</option>
+								<option value="13">13年（156期）</option>
+								<option value="14">14年（168期）</option>
+								<option value="15">15年（180期）</option>
+								<option value="16">16年（192期）</option>
+								<option value="17">17年（204期）</option>
+								<option value="18">18年（216期）</option>
+								<option value="19">19年（228期）</option>
+								<option selected value="20">20年（240期）</option>
+								<option value="25">25年（300期）</option>
+								<option value="30">30年（360期）</option>
+							</select>
 						</div>
 					</div>
 					<div class="warpper gjj">
-						<div class="left">
-							<div>
-								贷款利率:
-							</div>
+						<div>
+							贷款利率:
 						</div>
-						<div class="right">
-							<div class="lvb">
-								<select>
-									<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
-									<option value="3.4" >15年3月1日利率下限（85折）</option>
-									<option value="2.8" >15年3月1日利率下限（7折）</option>
-									<option value="4" selected>15年3月1日基准利率</option>
-									<option value="4.68" >14年11月22日利率上限（1.1倍）</option>
-									<option value="3.16" >14年11月22日利率下限（85折）</option>
-									<option value="2.97" >14年11月22日利率下限（7折）</option>
-									<option value="4.25" >14年11月22日基准利率</option>
-									<option value="4.5" >12年7月6日利率上限（1.1倍）</option>
-									<option value="4.5" >12年7月6日利率下限（85折）</option>
-									<option value="4.5" >12年7月6日利率下限（7折）</option>
-									<option value="4.5" >12年7月6日基准利率</option>
-									<option value="4.7" >12年6月8日利率上限（1.1倍）</option>
-									<option value="4.7" >12年6月8日利率下限（85折）</option>
-									<option value="4.7" >12年6月8日利率下限（7折）</option>
-									<option value="4.7" >12年6月8日基准利率</option>
-								</select>
-							</div>
+						<div class="lvb">
+							<select>
+								<option value="4.4" >15年3月1日利率上限（1.1倍）</option>
+								<option value="3.4" >15年3月1日利率下限（85折）</option>
+								<option value="2.8" >15年3月1日利率下限（7折）</option>
+								<option value="4" selected>15年3月1日基准利率</option>
+								<option value="4.68" >14年11月22日利率上限（1.1倍）</option>
+								<option value="3.16" >14年11月22日利率下限（85折）</option>
+								<option value="2.97" >14年11月22日利率下限（7折）</option>
+								<option value="4.25" >14年11月22日基准利率</option>
+								<option value="4.5" >12年7月6日利率上限（1.1倍）</option>
+								<option value="4.5" >12年7月6日利率下限（85折）</option>
+								<option value="4.5" >12年7月6日利率下限（7折）</option>
+								<option value="4.5" >12年7月6日基准利率</option>
+								<option value="4.7" >12年6月8日利率上限（1.1倍）</option>
+								<option value="4.7" >12年6月8日利率下限（85折）</option>
+								<option value="4.7" >12年6月8日利率下限（7折）</option>
+								<option value="4.7" >12年6月8日基准利率</option>
+							</select>
 						</div>
 					</div>
 					<div class="warpper sy hidden">
-						<div class="left">
-							<div>
-								贷款利率:
-							</div>
+						<div>
+							贷款利率:
 						</div>
-						<div class="right">
-							<div>
-								<select>
-									<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
-									<option value="5.015" >15年3月1日利率下限（85折）</option>
-									<option value="4.13" >15年3月1日利率下限（7折）</option>
-									<option value="5.9" selected>15年3月1日基准利率</option>
-									<option value="6.77" >14年11月22日利率上限（1.1倍）</option>
-									<option value="5.23" >14年11月22日利率下限（85折）</option>
-									<option value="4.31" >14年11月22日利率下限（7折）</option>
-									<option value="6.15" >14年11月22日基准利率</option>
-									<option value="7.21" >12年7月6日利率上限（1.1倍）</option>
-									<option value="5.57" >12年7月6日利率下限（85折）</option>
-									<option value="4.59" >12年7月6日利率下限（7折）</option>
-									<option value="6.55" >12年7月6日基准利率</option>
-									<option value="7.48" >12年6月8日利率上限（1.1倍）</option>
-									<option value="5.78" >12年6月8日利率下限（85折）</option>
-									<option value="4.76" >12年6月8日利率下限（7折）</option>
-									<option value="6.8" >12年6月8日基准利率</option>
-								</select>
-							</div>
-						</div>
+						<select>
+							<option value="6.49" >15年3月1日利率上限（1.1倍）</option>
+							<option value="5.015" >15年3月1日利率下限（85折）</option>
+							<option value="4.13" >15年3月1日利率下限（7折）</option>
+							<option value="5.9" selected>15年3月1日基准利率</option>
+							<option value="6.77" >14年11月22日利率上限（1.1倍）</option>
+							<option value="5.23" >14年11月22日利率下限（85折）</option>
+							<option value="4.31" >14年11月22日利率下限（7折）</option>
+							<option value="6.15" >14年11月22日基准利率</option>
+							<option value="7.21" >12年7月6日利率上限（1.1倍）</option>
+							<option value="5.57" >12年7月6日利率下限（85折）</option>
+							<option value="4.59" >12年7月6日利率下限（7折）</option>
+							<option value="6.55" >12年7月6日基准利率</option>
+							<option value="7.48" >12年6月8日利率上限（1.1倍）</option>
+							<option value="5.78" >12年6月8日利率下限（85折）</option>
+							<option value="4.76" >12年6月8日利率下限（7折）</option>
+							<option value="6.8" >12年6月8日基准利率</option>
+						</select>
 					</div>
 					<div class="warpper lv">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1"></div>
-								<div class="t2 m0">
-									<input id="dklv" type="text" value="5.9"/>
-								</div>
-								<div class="t3">
-									%
-								</div>
+						<div class="r1">
+							<div class="t1"></div>
+							<div class="t2 m0">
+								<input id="dklv" type="text" value="5.9"/>
+							</div>
+							<div class="t3">
+								%
 							</div>
 						</div>
 					</div>
 					<div class="warpper zhlv hidden">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									商&nbsp;&nbsp;&nbsp;&nbsp;业：
-								</div>
-								<div class="t2 m0">
-									<input id="zdklv" type="text" value="5.9"/>
-								</div>
-								<div class="t3">
-									%
-								</div>
+						<div class="r1">
+							<div class="t1">
+								商&nbsp;&nbsp;&nbsp;&nbsp;业：
+							</div>
+							<div class="t2 m0">
+								<input id="zdklv" type="text" value="5.9"/>
+							</div>
+							<div class="t3">
+								%
 							</div>
 						</div>
 					</div>
 					<div class="warpper zhlv hidden">
-						<div class="left">
-							<div></div>
-						</div>
-						<div class="right">
-							<div class="r1">
-								<div class="t1">
-									公积金：
-								</div>
-								<div class="t2 m0">
-									<input id="zdklv1" type="text" value="4"/>
-								</div>
-								<div class="t3">
-									%
-								</div>
+						<div class="r1">
+							<div class="t1">
+								公积金：
+							</div>
+							<div class="t2 m0">
+								<input id="zdklv1" type="text" value="4"/>
+							</div>
+							<div class="t3">
+								%
 							</div>
 						</div>
 					</div>
 					<div class="warpper">
-						<div class="left">
-							<div>
-								还款方式:
-							</div>
+						<div>
+							还款方式:
 						</div>
-						<div class="right">
-							<div id="hkfs">
-								<select class="sm">
-									<option value="1" selected>等额本息</option>
-									<option value="2" >等额本金</option>
-								</select>
-							</div>
+						<div id="hkfs">
+							<select class="sm">
+								<option value="1" selected>等额本息</option>
+								<option value="2" >等额本金</option>
+							</select>
 						</div>
 					</div>
 					<div class="warpper">
-						<div class="bd">
-							<button type="button" class="jsBtn">
-								开始计算
-							</button>
-						</div>
+						<button type="button" class="jsBtn">
+							开始计算
+						</button>
 					</div>
 				</form>
 			</div>
-
 		</div>
-
 		<script type="text/javascript" src="../../script/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="../../script/jquery.select.js"></script>
 		<script type="text/javascript">
@@ -357,16 +280,16 @@
 				"width" : 543,
 				"height" : 56
 			});
-			$(".jsp .warpper.gjj .right ul li").click(function() {
+			$(".jsp .warpper.gjj .ul li").click(function() {
 				var dd = $("#dklb ul li.focus").attr("name");
 				console.log(dd);
 				if (dd == "1") {
 					$("#dklv").val($(this).attr("name"));
 				} else if (dd == "2") {
-					$("#dklv").val($(".warpper.sy .right ul li").eq($(this).index()).attr("name"));
+					$("#dklv").val($(".warpper.sy .ul li").eq($(this).index()).attr("name"));
 				} else if (dd == "3") {
 					$("#zdklv").val($(this).attr("name"));
-					$("#zdklv1").val($(".warpper.sy .right ul li").eq($(this).index()).attr("name"));
+					$("#zdklv1").val($(".warpper.sy .ul li").eq($(this).index()).attr("name"));
 				}
 			});
 			$(".jsq button.jsBtn").click(function() {
