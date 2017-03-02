@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="img/off.png" />
+<p>按住鼠标不放可以看到你的情人！</p>
+
+<h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+请把鼠标移到这段文本上
+</h1>
+</body>
+<script>
+function lighton()
+{
+document.getElementById('myimage').src="img/on.png";
+}
+function lightoff()
+{
+document.getElementById('myimage').src="img/off.png";
+}
+</script>
+</html>

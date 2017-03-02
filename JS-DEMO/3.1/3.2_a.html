@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="checkcookies()">
+	<div id="mouse" onmouseover="mover(this)" onmouseout="mout(this)" style="background-color: blue;width: 100px;height: 20px;padding: 20px;color: #ffffff">
+		 上来！！！
+	</div><br>
+
+	<div onmousedown="mdown(this)" onmouseup="mup(this)" style="background-color: green;width: 100px;height: 20px;padding: 20px;color: #ffffff">
+		 上来！！！
+	</div>
+</body>
+<script>
+	function checkcookies () {
+		if (navigator.cookieEnabled==true) {
+			alert("浏览器启用cookies");
+		} else {
+			alert("浏览器未启用cookies")
+		}
+	}
+
+	function mover(obj){
+		obj.innerHTML="大清亡了？？？";
+		// document.getElementById("mouse").style.color='red';
+	}
+	function mout(obj){
+		obj.innerHTML="上来！！！";
+	}
+	/**/
+	function mdown(obj)
+	{
+		obj.style.backgroundColor="red";
+		obj.innerHTML="请释放鼠标按钮"
+	}
+
+	function mup(obj)
+	{
+		obj.style.backgroundColor="blue";
+		obj.innerHTML="请按下鼠标按钮"
+	}
+</script>
+</html>
