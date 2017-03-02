@@ -26,5 +26,17 @@
 	var message ="zhao shou xin";
 	var y =message.toUpperCase();
 	document.write("y="+y+"<br>");
+	console.log('123');
+
+	/*计算3^4^6 */
+	var a =Math.pow(3,Math.pow(4,6)); <!--错误-->
+	console.log("a=" + a); <!--输出了infinity 无穷大-->
+	var b =Math.pow(Math.pow(3,4),6);<!--!!!!!!!!!-->
+	console.log("b=" +b);
+	/**/
+	var c = Math.pow(81,6);
+	console.log("c=" + c);
+	var d=Math.pow(3.24); <!--错误-->
+	console.log("d=" + d);<!--输出了 NON  (not a number)-->
 </script>
 </html>
