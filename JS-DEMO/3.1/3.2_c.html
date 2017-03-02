@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<p id="p1">第一个</p>
+		<p id="p2">第二个</p>
+	</div>
+</body>
+<script>
+	// var parent =document.getElementById("div1");
+	// var child =document.getElementById("p1");
+	// parent.removeChild(child);
+	/*找到要删除的子元素，然后使用其 parentNode 属性来找到父元素：*/
+	var child =document.getElementById("p1");
+	child.parentNode.removeChild(child);
+	/**/
+	var message ="hellojavascript";
+	var x =message.length;
+	document.write("x="+x+"<br>");
+	document.write("x="+x+"<br>");
+	/**/
+	var message ="zhao shou xin";
+	var y =message.toUpperCase();
+	document.write("y="+y+"<br>");
+</script>
+</html>
