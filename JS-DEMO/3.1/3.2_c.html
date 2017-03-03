@@ -9,6 +9,26 @@
 		<p id="p1">第一个</p>
 		<p id="p2">第二个</p>
 	</div>
+	<div>
+		<a name="anchor_diy">
+			锚:读作“mao”
+		</a>
+	</div>
+	<div>
+		<p>
+			ThreadLocal(线程变量副本)
+
+Synchronized实现内存共享，ThreadLocal为每个线程维护一个本地变量。
+
+采用空间换时间，它用于线程间的数据隔离，为每一个使用该变量的线程提供一个副本，每个线程都可以独立地改变自己的副本，而不会和其他线程的副本冲突。
+
+ThreadLocal类中维护一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值为对应线程的变量副本。
+
+ThreadLocal在spring中发挥着巨大的作用，在管理Request作用域中的Bean、事务管理、任务调度、AOP等模块都出现了它的身影。
+
+Spring中绝大部分Bean都可以声明成Singleton作用域，采用ThreadLocal进行封装，因此有状态的Bean就能够以singleton的方式在多线程中正常工作了。
+		</p>
+	</div>
 </body>
 <script>
 	// var parent =document.getElementById("div1");
@@ -31,12 +51,72 @@
 	/*计算3^4^6 */
 	var a =Math.pow(3,Math.pow(4,6)); <!--错误-->
 	console.log("a=" + a); <!--输出了infinity 无穷大-->
+	document.write("a=" + a + "<br>");
 	var b =Math.pow(Math.pow(3,4),6);<!--!!!!!!!!!-->
 	console.log("b=" +b);
+	document.write("b=" + b + "<br>");
 	/**/
 	var c = Math.pow(81,6);
 	console.log("c=" + c);
+	document.write("c=" + c + "<br>");
 	var d=Math.pow(3.24); <!--错误-->
 	console.log("d=" + d);<!--输出了 NON  (not a number)-->
+	document.write("d=" + d + "<br>")
+	/*isNaN() 函数用于检查其参数 是否 是 非数字值。*/
+	document.write(isNaN("赵守鑫") + "<br>");
+	document.write(isNaN(123) + "<br>");
+	/**/
+	var str = "zhao shou xin";
+	document.write(str.indexOf("zhao") + "<br>");
+	document.write(str.indexOf("shou") + "<br>");
+	document.write(str.match("four") + "<br>");
+	document.write(str.match("xin") + "<br>");
+	document.write(str.replace(/xin/,"xin is good people") + "<br>");
+	/*锚*/
+	var txt ="zhao shou xin"
+	document.write(txt.anchor("anchor_diy") + "<br>");
+	/**/
+	var str ="zhao xin";
+	document.write(str.fixed() + "<Br>");
+	/* ECMAScript 定义所有对象都有 toString() 方法*/
+	var num = 100;
+	document.write(num.toString() + "<br>");<!--默认模式 返回十进制-->
+	document.write(num.toString(2) + "<br>");<!--基模式 根据进制返回-->
+	document.write(num.toString(8) + "<br>");
+	document.write(num.toString(16) + "<br>");
+	/*ECMAScript 提供了两种把非数字的原始值转换成数字的方法，即 parseInt() 和 parseFloat()。*/
+	/*parseInt用来转换成整数*/
+
+	/*parseInt() 方法首先查看位置 0 处的字符，判断它是否是个有效数字；如果不是，该方法将返回 NaN，不再继续执行其他操作。但如果该字符是有效数字，该方法将查看位置 1 处的字符，进行同样的测试。这一过程将持续到发现非有效数字的字符为止，此时 parseInt() 将把该字符之前的字符串转换成数字。*/
+	var ECMA1 =parseInt("123132color");
+	var ECMA2 =parseInt("0xffffff");
+	var ECMA3 =parseInt("04567");
+	var ECMA4 =parseInt("zhao shou xin");
+	document.write("ECMA1=" + ECMA1 + "<br>");
+	document.write("ECMA2=" + ECMA2 +"<br>");
+	document.write("ECMA3=" + ECMA3 + "<br>");
+	document.write("ECMA4=" + ECMA4 + "<br>");
+	/*parseFloat()方法与 parseInt() 方法的处理方式相似，从位置 0 开始查看每个字符，直到找到第一个非有效的字符为止，然后把该字符之前的字符串转换成整数。
+	不过，对于这个方法来说，第一个出现的小数点是有效字符。如果有两个小数点，第二个小数点将被看作无效的。parseFloat() 会把这个小数点之前的字符转换成数字。这意味着字符串 "11.22.33" 将被解析成 11.22。*/
+	/* parseFloat() 方法的另一不同之处在于，字符串必须以十进制形式表示浮点数*/
+	var ECMA5 = parseFloat("233.333.2333");
+	var ECMA6 = parseFloat("zhao shou xin");
+	var ECMA7 = parseFloat("0xABCDEF");
+	var ECMA8 = parseFloat("01234567");
+	document.write("ECMA5=" +ECMA5 +"<br>");
+	document.write("ECMA6=" +ECMA6 +"<br>");
+	document.write("ECMA7=" +ECMA7 +"<br>");
+	document.write("ECMA8=" +ECMA8 +"<br>");
+	/*ECMAScript 中可用的 3 种强制类型转换如下：
+	Boolean(value) - 把给定的值转换成 Boolean 型；
+	Number(value) - 把给定的值转换成数字（可以是整数或浮点数）；
+	String(value) - 把给定的值转换成字符串；*/
+
+	/*Boolean() 函数
+	当要转换的值是至少有一个字符的字符串、非 0 数字或对象时，Boolean() 函数将返回 true。如果该值是空字符串、数字 0、undefined 或 null，它将返回 false。*/
+
+	/*getTime() 返回从 1970 年 1 月 1 日至今的毫秒数。*/
+	var d = new Date();
+	document.write("从 1970/01/01 至今已过去 " + d.getTime() + " 毫秒");
 </script>
 </html>

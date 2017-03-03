@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+	.time{
+		border-color: red;
+		border-radius: 50%;
+		border: solid 1px;
+		width: 400px;
+		height: 400px;
+		padding-top: 20%;
+		margin-left: 35%;
+		font-size: 100px;
+		color: red;
+	}
+</style>
+</head>
+<body onload="startTime()">
+<div id="txt" class="time">
+	
+</div>
+</body>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+// add a zero in front of numbers<10
+m=checkTime(m)
+s=checkTime(s)
+document.getElementById('txt').innerHTML=h+":"+m+":"+s
+t=setTimeout('startTime()',500)
+}
+
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>给你送个钟???????????????????</title>
+</head>
+<body onload="startTime()">
+	<div id="txt">
+		
+	</div>
+</body>
+<script type="text/javascript">
+	function startTime(){
+		var today = new Date();
+		var h =today.getHours();
+		var m =today.getMinutes();
+		var s =tody.getSeconds();
+
+		m =checkTime(m);
+		s =checkTime(s);
+		document.getElementById('txt').innerHTML=h + ":" + m + ":" + s
+		t=setTimeout('startTime()',500)
+	}
+	function checkTime(i){
+		if (i<10) 
+		  {i="0" + i}
+		  return i
+	}
+</script>
+</html>
