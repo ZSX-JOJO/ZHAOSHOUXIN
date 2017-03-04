@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>获取浏览器高度&宽度</title>
+<body>
+<p id="zsx">
+</p>
+<input type="button" value="打开窗口" onclick="openWin()"><br><br><br>
+<input type="button" value="移动窗口" onclick="moveWin()"><br><br><br>
+</body>
+<script>
+var w=window.innerWidth
+|| document.documentElement.clientWidth<!--对于 Internet Explorer 8、7、6、5：-->
+|| document.body.clientWidth;<!--对于 Internet Explorer 8、7、6、5：-->
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight<!--对于 Internet Explorer 8、7、6、5：-->
+|| document.body.clientHeight;<!--对于 Internet Explorer 8、7、6、5：-->
+
+x=document.getElementById("zsx");
+x.innerHTML="浏览器的内部窗口宽度：" + w + "，高度：" + h + "。"
+/**/
+function openWin(){
+	jojoWindow =window.open('' , '' ,'width=200,height=100');
+	jojoWindow.document.write("窗口");
+}
+function moveWin(){
+	jojoWindow.moveTo(200.300);
+	jojoWindow.focus();
+}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+/*window.open(URL,name,specs,replace)*/
+
+function openWin(){
+    // myWindow=window.open('','','width=200,height=200');
+    myWindow=window.open('http://www.baidu.com','' ,'width=200,height=200');
+    // myWindow.document.write("<p>这是我的窗口</p>");
+}
+function moveWin(){
+    myWindow.moveTo(200,300);
+    myWindow.focus();
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="打开窗口" onclick="openWin()" style="float: left;" />
+<input type="button" value="移动窗口" onclick="moveWin()" style="float: right;" />
+
+</body>
+</html>
