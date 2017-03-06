@@ -3,11 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Window.Navigator</title>
+	<style>
+		.text_style{
+			font-size: 20px;
+			color: red;
+			position: relative;
+			text-align: center;
+		}
+		.example_style{
+			position: relative;
+			font-size: 15px;
+			text-align: center;
+			color: green;
+		}
+	</style>
 </head>
 <body>
-	<div id="example"></div>
+	<p id="text" class="text_style"></p>
+	<div id="example" class="example_style"></div>
+	<input type="button" onclick="alert_diy1()" value="显示警告框1" style="float: left;">
+	<input type="button" onclick="alert_diy2()" value="显示警告框2" style="float: right;">
 </body>
 <script>
+	p_txt="<p>windos.navigator对象包含有关访问者浏览器的信息</p>"
 	txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
 	txt+= "<p>Browser Name: " + navigator.appName + "</p>";
 	txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
@@ -15,6 +33,15 @@
 	txt+= "<p>Platform: " + navigator.platform + "</p>";
 	txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
 	txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+	document.getElementById("text").innerHTML=p_txt;
 	document.getElementById("example").innerHTML=txt;
+	/*警告框*/
+	function alert_diy1(){
+		alert("滴答！滴答！");
+	}
+	/*带有折行的警告框*/
+	function alert_diy2(){
+		alert(" 折行就是添加" + "\n" + "\n这个符号而已")
+	}
 </script>
 </html>

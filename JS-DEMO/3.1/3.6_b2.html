@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>确认框&提示框</title>
+	<style>
+		#diy_confirm{
+			color: red;
+			border-color: green;
+			width: 400px;
+			height: 400px;
+			border-width: 50px;
+			border-radius: 50%;
+			margin-left: 10%;
+			margin-top: 3%;
+			float: left;
+		}
+		#diy_prompt{
+			color: red;
+			border-color: blue;
+			width: 400px;
+			height: 400px;
+			border-width: 50px;
+			border-radius:50%;
+			margin-right: 10%;
+			margin-top: 3%;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="diy_confirm" onclick="show_confirm()" value="确认框">
+	<input type="button" id="diy_prompt" onclick="show_prompt()" value="提示框">
+</body>
+<script>
+	/*确认框*/
+	function show_confirm(){
+		var  r=confirm("请点击按钮！")
+		if (r==true) {
+			alert("你按的是确认！")
+		}
+		else {
+			alert(" 你按的是取消！")
+		}
+	}
+	/*提示框*/
+	function show_prompt(){
+		var name =prompt("输入名字","不要输错了！");
+		if (name !=null && name !="")
+		{
+			document.write("告诉你一句真心话:" + name + "你就是一个垃圾！")
+		}
+	}
+</script>
+</html>

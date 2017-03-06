@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>计时器</title>
+		<style>
+			#button{
+				color: red;
+				width: 200px;
+				height: 200px;
+				border-width: 30px;
+				border-radius: 50%;
+				/*float: left;*/
+			}
+			#txt{
+				width: 30px;
+				height: 30px;
+				border-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		<input type="button" id="button" value="开始计时！" onClick="timedCount()">
+		<input type="button" value="停止计时！" onClick="stopCount()">
+		<input type="text" id="txt">
+		</form>
+		<p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
+		<p></p>
+	</body>
+	<script type="text/javascript">
+		var c=0
+		var t
+		function timedCount()
+		{
+		clearTimeout(t)
+		document.getElementById('txt').value=c
+		c=c+1
+		t=setTimeout("timedCount()",1000)
+		}
+
+		function stopCount()
+		{
+		c=0;
+		setTimeout("document.getElementById('txt').value=0",0);
+		clearTimeout(t);
+		}
+	</script>
+</html>
