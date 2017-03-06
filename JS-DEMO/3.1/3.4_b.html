@@ -8,19 +8,41 @@
 
 function openWin(){
     // myWindow=window.open('','','width=200,height=200');
-    myWindow=window.open('http://www.baidu.com','' ,'width=200,height=200');
-    // myWindow.document.write("<p>这是我的窗口</p>");
+    myWindow=window.open('','','width=200,height=200');
+    myWindow.document.write("<p>这是我的窗口</p>");
 }
 function moveWin(){
-    myWindow.moveTo(200,300);
+    myWindow.moveTo(200,100);
     myWindow.focus();
+}
+/*screen.availWidth屏幕可用宽度&高度*/
+document.write("屏幕可用宽度:" + screen.availWidth + "<br>");
+document.write("可用高度:" + screen.availHeight + "<br>");
+document.write("当前页面url:" +  location.href + "<br>");
+document.write("当前页面url的路径名:" + location.pathname + "<br>");
+document.write("返回 web 主机的域名:" + location.hostname + "<br>");
+document.write("返回 web 主机的端口:" + location.port + "<br>");
+document.write("返回所使用的 web 协议:" + location.prot0col + "<br>");
+/*加载新文档*/
+function newDoc(){
+	window.location.assign("http://www.baidu.com")
+}
+/**/
+function goBack(){
+	window.history.back();
+}
+/**/
+function goForward(){
+	window.history.forward();
 }
 </script>
 </head>
 <body>
 
-<input type="button" value="打开窗口" onclick="openWin()" style="float: left;" />
-<input type="button" value="移动窗口" onclick="moveWin()" style="float: right;" />
-
+<input type="button" value="打开窗口" onclick="openWin()" style="float: left;" /><br>
+<input type="button" value="移动窗口" onclick="moveWin()" style="float: right;" /><br>
+<input type="button" value="加载新文档" onclick="newDoc()"><br>
+<input type="button" value="后退" onclick="goBack()" style="float: left;"><br>
+<input type="button" value="前进" onclick="goforward()" style="float: right;"><br>
 </body>
 </html>
