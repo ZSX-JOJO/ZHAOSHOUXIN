@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>cookie</title>
+		<style type="text/css">
+			.we{
+				color: #8E7080FF;
+			}
+		</style>
+	</head>
+	<body onload="checkCookie()">
+		<p>在 JavaScript 中函数就是变量</p>
+	</body>
+	<script type="text/javascript">
+		/*设置cookie值的函数*/
+		function setCookie (cname,cvalue,exdays){
+			var d = new Date();
+			d.setTime(d.getTime()+(exdays*24*60*60*1000));
+			var expires = "expires=" + d.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" +expires;
+		}
+		/*获取cookie值的函数*/
+		function getCookie(cname){
+			var name = cname + "=";
+			var ca =document.cookie.split(';');
+			for (var i=0;i<ca.length;i++){
+				var c =ca[i].trim();
+				if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+			}
+			return "";
+		}
+		/*检测cookie值的函数*/
+		function checkCookie(){
+			var username =getCookie("username");
+			if (username !=""){
+				alert("欢迎回来！" + username);
+			}
+			else {
+				username = prompt("请输入你的姓名:","");
+				if (username !="" && username !=null){
+					setCookie("username",username,30);
+				}
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="button" name="" value="查看" onclick="message()">
+	</body>
+	<script type="text/javascript">
+		var txt="";
+		function message(){
+			try {
+				adddlert("welcome")
+				// alert("这才是正确的")
+			} catch(err) {
+				alert(err);
+				txt ="存在错误\n"
+				txt+="点击“确定”继续本页面"
+				txt+="点击“取消”返回首页"
+				if (!confirm(txt)) {
+					document.location.href="http:www.baidu.com"
+				}
+			}
+		}
+	</script>
+</html>
